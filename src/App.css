@@ -1,0 +1,5 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Bu CSS kodunu eklediğinde, tarayıcı aradaki mesafeyi hesaplar ve seni oraya yumuşak bir animasyonla kaydırarak götürür. */
