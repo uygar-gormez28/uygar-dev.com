@@ -8,6 +8,7 @@ import Resume from "./component/Resume";
 function App() {
   return (
     <>
+      {/* sadece deneme yapıyorum */}
       <Hero />
       <About />
       {/* ID'leri buraya ekliyoruz */}
