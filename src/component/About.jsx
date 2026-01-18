@@ -30,7 +30,7 @@ const About = () => {
             </h2>
             <div className="text-gray-300 space-y-4 leading-relaxed">
               <p>
-                Merhaba! Ben Uygar Görmez, Bilgisayar Mühendisliği 4.cü sınıf öğrencisiyim. Web sayfası ve mobil
+                Merhaba! Ben Uygar Görmez, Bilgisayar Mühendisliği 4.sınıf öğrencisiyim. Web sayfası ve mobil
                 uygulamalar üzerinde çalışıp geliştirmeler yapıyorum.
               </p>
               <p>
