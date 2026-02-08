@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const srcollPos = window.scrollY;
         
         if (srcollPos > 100) {
-            header.style.background = 'rgba(46, 2, 73, 0.95)';
+            header.style.background = 'rgba(6, 78, 59, 0.95)';
             header.style.padding = '10px 0';
         } else {
-            header.style.background = 'rgba(46, 2, 73, 0.8)';
+            header.style.background = 'rgba(6, 78, 59, 0.8)';
             header.style.padding = '15px 0';
         }
     });
