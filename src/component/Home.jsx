@@ -5,16 +5,24 @@ import Hero from "./Hero";
 import Projects from "./Projects";
 import Resume from "./Resume";
 import Certificates from "./Certificates";
+import Blog from "./Blog";
 
 const Home = () => {
   return (
     <>
       <Hero />
       <About />
-      <Projects />
+      <section id="projects">
+        <Projects />
+      </section>
       <Certificates />
       <Resume />
-      <Contact />
+      <section id="contact">
+        <Contact />
+      </section>
+      <section id="blog">
+        <Blog />
+      </section>
     </>
   );
 };
