@@ -59,10 +59,10 @@ const Contact = () => {
           {contacts.map((contact, index) => (
             <a
               key={index}
-              href={contact.link || "#"}
-              target={contact.link && !contact.link.startsWith("mailto:") ? "_blank" : "_self"}
+              href={contact.link}
+              target={contact.link.startsWith("mailto:") ? "_self" : "_blank"}
               rel="noopener noreferrer"
-              className={`flex flex-col items-center group ${!contact.link && "cursor-default"}`}
+              className={`flex flex-col items-center group cursor-pointer`}
             >
               {/* Daire */}
               <div

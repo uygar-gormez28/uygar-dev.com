@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -15,7 +16,6 @@ const Hero = () => {
           }}
         ></div>
         
-        {/* Yorum satırı düzeltildi */}
         <div className="relative z-10 text-center px-4">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 transition-all duration-300 hover:scale-105 hover:text-shadow-glow">
             Merhaba, Ben{" "}
@@ -29,18 +29,18 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* Projeler Butonu - Linke çevrildi */}
+            {/* Projeler Butonu */}
             <a 
               href="#projects"
-              className="px-10 py-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-full font-semibold hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 text-center"
+              className="px-10 py-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-full font-semibold hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 ease-in-out text-center"
             >
               Projelerim
             </a>
 
-            {/* İletişim Butonu - Linke çevrildi */}
+            {/* İletişim Butonu */}
             <a 
               href="#contact"
-              className="px-10 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-black hover:scale-110 hover:shadow-2xl hover:shadow-white/50 transition-all duration-300 text-center"
+              className="px-10 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-black hover:scale-110 hover:shadow-2xl hover:shadow-white/50 transition-all duration-500 ease-in-out text-center"
             >
               İletişim
             </a>
