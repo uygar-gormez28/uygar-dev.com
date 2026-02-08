@@ -22,6 +22,7 @@ const Resume = () => {
         "PostgreSQL ve DataFrame yapıları ile ETL süreçlerini deneyimledim.",
         "Matplotlib ile temel veri görselleştirme çalışmaları yaptım.",
         "5ML problemini farklı modeller ile çözüp görselleştirdim.",
+        "Fitoterapi (bitkisel tedavi) ve yapay zekâ (yz) kesişiminde akademik bir araştırma ödevi yaptım.",
       ],
     },
   ];
@@ -31,8 +32,10 @@ const Resume = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Başlık */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4 pb-2 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Özgeçmiş
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Özgeçmiş
+            </span>
           </h2>
           <p className="text-gray-400 text-lg">Eğitim, deneyim ve projelerim</p>
         </div>

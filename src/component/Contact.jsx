@@ -47,11 +47,12 @@ const Contact = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Başlık */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold pb-2 mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            İletişim
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              İletişim
+            </span>
           </h2>
           <p className="text-gray-400 text-lg">Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz</p>
-          <p className="text-gray-400 text-lg">İkonlara tıklamanız yeterli</p>
         </div>
 
         {/* İkonlar Alanı - Flexbox ile Ortalandı */}

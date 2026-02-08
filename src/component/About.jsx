@@ -15,7 +15,7 @@ const About = () => {
         <div className="flex justify-center mb-16">
           <div className="relative group">
             <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-purple-500/50 hover:border-blue-500 transition-all duration-300 hover:scale-105 shadow-2xl shadow-blue-500/20">
-              <img src="/img/pc.png" alt="Uygar Görmez" className="w-full h-full object-cover" />
+              <img src="/img/Ter.jpeg" alt="Uygar Görmez" className="w-full h-full object-cover" />
             </div>
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 blur-xl -z-10"></div>
           </div>
