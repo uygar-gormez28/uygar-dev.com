@@ -5,8 +5,8 @@ import { Clock, User } from 'lucide-react';
 const posts = [
   {
     id: 1,
-    title: "LotusAI Staj Deneyimim: Veri Bilimi ve Makine Öğrenmesi",
-    excerpt: "3 aylık KNI/ME, Data Science ve Machine Learning stajı sürecinde öğrendiklerim ve deneyimlerim.",
+    title: "LotusAI Gönüllü Staj Deneyimim: Veri Bilimi ve Makine Öğrenmesi",
+    excerpt: "LotusAI'de 3 aylık KNINME, Data Science ve Machine Learning stajı sürecinde öğrendiklerim ve deneyimlerim.",
     date: "Jan 17, 2025",
     readTime: "8 min read",
     author: "Uygar Görmez",
@@ -14,17 +14,29 @@ const posts = [
     image: "/img/Lotus.png",
     content: `Blog detay kısmında kendin yazacaksın...
 
+## Staj Bulma Sürecim  
+
+Bir arkadaşım Linkedin üzerinden firmayı bulup orada yaz stajı yapmıştı bende onun tavsiyesi üzerine mail attım firmaya. 2 ay sonra staj yapabileceğimi söylediler. 
+
+Staj zamanı gelince bana kimse ulaşmadı bende firmaya 10'dan fazla mail attım en sonda Linkedin üzerinden Firmanın CEO'suna yazdım. Sağolsun o bana dönüş yaptıktan sonra bana sorumlu mühendisim ulaştı ve staja başladım.
+
+Bazenleri öyle olanı kabullenmemek lazım bazenleri ellerinle tırmalaya tırmalaya hedefe ulaşmalısındır.
+
 ## Staj Süreci
 
-3 aylık LotusAI stajım boyunca KNI/ME, veri bilimi ve makine öğrenmesi alanlarında yoğun bir deneyim yaşadım.
+LotusAI'de ki staj sürecim tasklar üzerinden ilerledi.
+
+Tasklarım sırayla; KNIME , Makine öğrenmesi, 100SQL sorgusu, Veri görselleştirme ve 5 makine öğrenmesi proejesi yapmak oldu sonrasonda ekstra olarak bir akademik ödevde alıp yaptım.
+
+staj aslında react ve dijango eğitimi de kapsıyordu ama yaşanılan aksilikler ve bazı taskların süresi ve benim geç başlamam derken o iki kısmını yapmadım ama zaten bildiğim alanlar olduğu için sorun yaşamadım.
 
 ## Öğrendiklerim
 
-Python, Machine Learning, SQLite, Plotly ve Seaborn gibi teknolojileri kullanarak 5 farklı makine öğrenmesi projesi tamamladım.
+Python,KNIME, Machine Learning, SQLite, Plotly ve Seaborn gibi teknolojileri kullanarak 5 farklı makine öğrenmesi projesi tamamladım.
 
 ## Sonuç
 
-Bu staj deneyimi, teorik bilgilerimi pratiğe dönüştürmem için harika bir fırsat oldu.`
+Bu staj deneyimi, Bir özel firmada süreç nasıl işler? neler yapılır üst alt ilişkisi ve bir  yazılımcı olmak nasıldır bunları öğrendim. Üstüne  teorik bilgilerimi pratiğe dönüştürmem için harika bir fırsat oldu. `
   },
   {
     id: 2,
@@ -69,13 +81,13 @@ const Blog = () => {
             <Link 
               to={`/blog/${post.id}`} 
               key={post.id} 
-              className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 cursor-pointer block"
+              className="group relative bg-white/5 backdrop-blur-sm border border-purple-500/50 rounded-2xl overflow-hidden hover:border-purple-500 transition-all duration-300 block shadow-lg hover:shadow-purple-500/30"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden relative">
                 <img 
                   src={post.image} 
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-8">
@@ -89,7 +101,7 @@ const Blog = () => {
                   </span>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4 tracking-tight group-hover:text-blue-400 transition-colors">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4 tracking-tight">
                   {post.title}
                 </h3>
                 

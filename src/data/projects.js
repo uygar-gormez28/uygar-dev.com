@@ -2,8 +2,8 @@ export const projects = [
   {
     id: "notlarsende",
     title: "NotlarSende",
-    description: "Öğrencilerin kendi aralarında not paylaşımı yapabildiği platform.",
-    detailedDescription: "NotlarSende, üniversite ve lise öğrencilerinin ders notlarını dijital ortamda saklamasını ve paylaşmasını sağlayan kapsamlı bir eğitim platformudur.\n\nGelişmiş arama ve filtreleme özellikleri ile öğrenciler ihtiyaç duydukları ders notlarına kolayca erişebilirler. Kullanıcılar kendi notlarını yükleyebilir, başkalarının notlarını inceleyebilir ve yorum yapabilirler. Django framework'ü ile güvenli ve hızlı bir altyapı sunulur.",
+    description: "Üniversite öğrencilerinin ders notlarını dijital ortamda saklamasını ve paylaşmasını sağlayan kapsamlı bir not paylaşım platformudur.",
+    detailedDescription: "NotlarSende, üniversite öğrencilerinin ders notlarını dijital ortamda saklamasını ve paylaşmasını sağlayan kapsamlı bir not paylaşım platformudur.\n\nGelişmiş arama ve filtreleme özellikleri ile öğrenciler ihtiyaç duydukları ders notlarına kolayca erişebilirler. Kullanıcılar kendi notlarını yükleyebilir, başkalarının notlarını inceleyebilir ve yorum yapabilirler. Django framework'ü ile güvenli ve hızlı bir altyapı sunulur.",
     image: "/img/Not.png",
     github: "https://github.com/uygar-gormez28/NotlarSende",
     tags: ["Django", "HTML", "CSS"],
@@ -12,7 +12,7 @@ export const projects = [
   {
     id: "lotus-ai-internship",
     title: "LotusAI Staj Portföyü",
-    description: "3 aylık KNI/ME & Data Science & Machine Learning stajı sürecinde geliştirdiğim projeler ve öğrendiklerim.",
+    description: "LotusAI'de 3 aylık KNI/ME & Data Science & Machine Learning stajı sürecinde geliştirdiğim projeler ve öğrendiklerim.",
     detailedDescription: "LotusAI'da geçirdiğim 3 aylık staj sürecinde KNI/ME, veri bilimi ve makine öğrenmesi alanlarında yoğun bir deneyim yaşadım.\n\nStaj boyunca Python, machine learning, SQLite, Plotly ve Seaborn gibi teknolojileri kullanarak 5 farklı makine öğrenmesi projesi tamamladım. Veri görselleştirme, model eğitimi ve gerçek dünya problemlerine çözüm üretme deneyimi kazandım. Ayrıca fitoterapi ve yapay zeka kesişiminde akademik bir araştırma ödevi gerçekleştirdim.",
     image: "/img/Lotus.png",
     github: "https://github.com/uygar-gormez28/LotusAI-Internship-Portfolio",
@@ -38,5 +38,5 @@ export const projects = [
     github: "https://github.com/uygar-gormez28/Nika",
     tags: ["React", "Firebase", "Tailwind CSS"],
     documents: []
-  },
+  }
 ];

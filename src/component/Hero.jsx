@@ -65,7 +65,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* CV İndir Butonu */}
             <a 
-              href="/cv/Uygar_Gormez_CV.pdf"
+              href="/cv/Uygar_Görmez_CV.pdf"
               download
               className="px-10 py-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-full font-semibold hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 ease-in-out text-center flex items-center justify-center gap-2"
             >
