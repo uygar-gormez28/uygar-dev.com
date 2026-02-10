@@ -92,12 +92,12 @@ const Certificates = () => {
               </div>
               
               <div className="p-5">
-                <h4 className="text-lg font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-2">{event.title}</h4>
-                <div className="flex items-center gap-2 text-gray-400 text-xs mb-3">
+                <h4 className="text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3 tracking-tight">{event.title}</h4>
+                <div className="flex items-center gap-2 text-gray-400 text-xs mb-4">
                   <MapPin className="w-3 h-3" />
                   {event.location}
                 </div>
-                <p className="text-gray-400 text-xs line-clamp-2 mb-3">{event.description}</p>
+                <p className="text-gray-300 text-sm font-light leading-relaxed line-clamp-4 mb-6">{event.description}</p>
                 
                 <div className="flex justify-between items-center mt-3 border-t border-white/10 pt-3">
                    <div className="text-purple-400 text-xs font-medium flex items-center gap-1">

@@ -89,11 +89,11 @@ const Blog = () => {
                   </span>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-4 tracking-tight group-hover:text-blue-400 transition-colors">
                   {post.title}
                 </h3>
                 
-                <p className="text-gray-400 mb-6 line-clamp-2">
+                <p className="text-gray-300 mb-6 leading-relaxed text-base font-light line-clamp-4">
                   {post.excerpt}
                 </p>
 

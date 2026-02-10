@@ -55,7 +55,7 @@ const ProjectDetail = () => {
           {/* Content */}
           <div className="max-w-3xl mx-auto mb-12">
             <div className="prose prose-lg prose-invert mx-auto">
-              <p className="text-gray-300 leading-loose text-lg whitespace-pre-line text-left md:text-center mb-6">
+              <p className="text-gray-300 leading-loose text-lg whitespace-pre-line text-left mb-6">
                 {project.detailedDescription}
               </p>
               

@@ -57,9 +57,9 @@ const EventDetail = () => {
           </div>
 
           {/* Content */}
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <div className="prose prose-lg prose-invert mx-auto">
-              <p className="text-gray-300 leading-loose text-lg whitespace-pre-line text-left md:text-center">
+          <div className="max-w-3xl mx-auto mb-12">
+            <div className="prose prose-lg prose-invert text-left">
+              <p className="text-gray-300 leading-loose text-lg whitespace-pre-line">
                 {event.detailedDescription || event.description}
               </p>
             </div>
