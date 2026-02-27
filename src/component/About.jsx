@@ -1,7 +1,7 @@
 import React from "react";
 
 const About = () => {
-  const technologies = ["Python", "JavaScript", "TypeScript", "React", "Tailwind CSS", "Git", "HTML/CSS", "SQL"];
+  const technologies = ["TypeScript", "JavaScript", "Python", "React", "Tailwind CSS", "Git", "HTML/CSS", "SQL"];
 
   return (
     <section
