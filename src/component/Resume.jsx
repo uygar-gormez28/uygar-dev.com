@@ -4,9 +4,22 @@ const Resume = () => {
   const education = {
     school: "Nişantaşı Üniversitesi",
     degree: "Bilgisayar Mühendisliği",
-    period: "2021 - 2026",
+    period: "2021 - 2025",
     location: "İstanbul, Türkiye",
-    description: "Lisans eğitimine devam etmekteyim, İngilizce hazırlık yılı dahil.",
+    description: (
+      <>
+        İstanbul Nişantaşı Üniversitesi bünyesinde,{" "}
+        <a
+          href="/sertifika/B2%20Level.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-500/50 hover:decoration-blue-400 transition-all font-medium"
+        >
+          B2 Seviye İngilizce Hazırlık
+        </a>{" "}
+        eğitimini başarıyla tamamlayarak Bilgisayar Mühendisliği lisans programından mezun oldum.
+      </>
+    ),
   };
 
   const experience = [
@@ -57,8 +70,11 @@ const Resume = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">{education.school}</h3>
                 <p className="text-purple-400 font-semibold mb-1">{education.degree}</p>
-                <p className="text-gray-400 text-sm mb-2">📍 {education.location}</p>
-                <p className="text-gray-300 text-sm">{education.description}</p>
+                <p className="text-gray-400 text-sm mb-3">📍 {education.location}</p>
+                <div className="text-gray-300 text-sm mb-4 leading-relaxed flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  <span>{education.description}</span>
+                </div>
               </div>
             </div>
           </div>
