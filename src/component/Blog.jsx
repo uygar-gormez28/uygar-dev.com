@@ -7,7 +7,7 @@ const posts = [
     id: 1,
     title: "LotusAI Gönüllü Staj Deneyimim: Veri Bilimi ve Makine Öğrenmesi",
     excerpt: "LotusAI'de 3 aylık KNINME, Data Science ve Machine Learning stajı sürecinde öğrendiklerim ve deneyimlerim.",
-    date: "Jan 17, 2025",
+    date: "17 Ocak 2025",
     readTime: "8 min read",
     author: "Uygar Görmez",
     category: "Kariyer",
@@ -42,7 +42,7 @@ Bu staj deneyimi, Bir özel firmada süreç nasıl işler? neler yapılır üst 
     id: 2,
     title: "Yazılıma Yolculuğum: Meraktan Mühendisliğe",
     excerpt: "2021 YKS'den bugüne, teknoloji merakının kariyer hedefine dönüşme hikayesi ve öğrenme sürecim.",
-    date: "Jan 2, 2025",
+    date: "2 Ocak 2025",
     readTime: "6 min read",
     author: "Uygar Görmez",
     category: "Kariyer",
@@ -101,7 +101,7 @@ const Blog = () => {
                   </span>
                 </div>
                 
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4 tracking-tight">
+                <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
                   {post.title}
                 </h3>
                 

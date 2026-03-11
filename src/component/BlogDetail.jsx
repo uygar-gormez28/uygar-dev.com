@@ -51,7 +51,7 @@ const BlogDetail = () => {
               </div>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               {post.title}
             </h1>
 
