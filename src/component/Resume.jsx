@@ -4,9 +4,9 @@ const Resume = () => {
   const education = {
     school: "Nişantaşı Üniversitesi",
     degree: "Bilgisayar Mühendisliği",
-    period: "2021 - 2025",
+    period: "2021 - 2026",
     location: "İstanbul, Türkiye",
-    description: (
+    details: [
       <>
         İstanbul Nişantaşı Üniversitesi bünyesinde,{" "}
         <a
@@ -17,15 +17,16 @@ const Resume = () => {
         >
           B2 Seviye İngilizce Hazırlık
         </a>{" "}
-        eğitimini başarıyla tamamlayarak Bilgisayar Mühendisliği lisans programından mezun oldum.
-      </>
-    ),
+        eğitimini başarıyla tamamladım.
+      </>,
+      "Bilgisayar Mühendisliği lisans programından mezun oldum.",
+    ],
   };
 
   const experience = [
     {
       company: "Lotus-AI Yapay Zeka ve Bilişim Çözümleri A.Ş.",
-      position: "Stajyer",
+      position: "Software Stajyer",
       period: "Kas 2025 - Oca 2026",
       location: "İstanbul, Türkiye",
       duration: "3 ay",
@@ -36,6 +37,20 @@ const Resume = () => {
         "Matplotlib ile temel veri görselleştirme çalışmaları yaptım.",
         "5ML problemini farklı modeller ile çözüp görselleştirdim.",
         "Fitoterapi (bitkisel tedavi) ve yapay zekâ (yz) kesişiminde akademik bir araştırma ödevi yaptım.",
+        "Günlük faaliyet raporları ile çalışma disiplini, şeffaf iş akışı ve görev takibi süreçlerini yürüttüm.",
+      ],
+    },
+    {
+      company: "Gaziosmanpaşa Belediyesi | Bilgi İşlem Müdürlüğü",
+      position: "IT Stajyer",
+      period: "Şub 2026 - Haz 2026",
+      location: "İstanbul, Türkiye",
+      duration: "5 ay",
+      responsibilities: [
+        "Belediye birimlerinden gelen teknik sorunlara yerinde müdahale ederek sistem sürekliliğini sağladım.",
+        "Kurumsal ölçekte Windows ve Linux tabanlı sistemlerin kurulum ve konfigürasyon işlemlerini gerçekleştirdim.",
+        "Kurumsal donanım sistemlerinin (PC, sunucu, ağ bileşenleri) kurulumu, bakımı ve arıza giderme süreçlerinde aktif rol aldım.",
+        "Sektör profesyonelleriyle Docker, React, Yapay zeka ve Linux mimarileri üzerine teknik istişarelerde bulunarak kurumsal yazılım süreçlerini gözlemledim.",
       ],
     },
   ];
@@ -71,10 +86,14 @@ const Resume = () => {
                 <h3 className="text-2xl font-bold text-white mb-2">{education.school}</h3>
                 <p className="text-purple-400 font-semibold mb-1">{education.degree}</p>
                 <p className="text-gray-400 text-sm mb-3">📍 {education.location}</p>
-                <div className="text-gray-300 text-sm mb-4 leading-relaxed flex items-start">
-                  <span className="text-blue-400 mr-2">•</span>
-                  <span>{education.description}</span>
-                </div>
+                <ul className="space-y-2 mb-4">
+                  {education.details.map((detail, idx) => (
+                    <li key={idx} className="text-gray-300 text-sm leading-relaxed flex items-start">
+                      <span className="text-blue-400 mr-2">•</span>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -113,8 +132,9 @@ const Resume = () => {
         {/* CV İNDİRME BUTONU - GÜNCELLENMİŞ KISIM */}
         <div className="text-center mt-12">
           <a
-            href="/cv/Uygar_Görmez_CV%20-%20Kopya.pdf"
-            download="Uygar_Gormez_CV_Kopya.pdf"
+            href="/cv/Uygar_G%C3%B6rmez_CV%20-%20Kopya.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

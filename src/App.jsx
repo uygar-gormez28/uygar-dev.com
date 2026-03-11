@@ -6,9 +6,12 @@ import ProjectDetail from "./component/ProjectDetail";
 import EventDetail from "./component/EventDetail";
 import BlogDetail from "./component/BlogDetail";
 
+import ScrollToTopOnMount from "./component/ScrollToTopOnMount";
+
 function App() {
   return (
     <Router>
+      <ScrollToTopOnMount />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project/:id" element={<ProjectDetail />} />
