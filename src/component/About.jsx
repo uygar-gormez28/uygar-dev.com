@@ -1,7 +1,19 @@
 import React from "react";
 
 const About = () => {
-  const technologies = ["TypeScript", "JavaScript", "Python", "React", "Tailwind CSS", "Git", "HTML/CSS", "SQL"];
+  const technologies = [
+    "TypeScript",
+    "JavaScript",
+    "React",
+    "React Native",
+    "Python",
+    "SQL",
+    "Docker",
+    "Git",
+    "Tailwind CSS",
+
+    "HTML/CSS",
+  ];
 
   return (
     <section
@@ -30,8 +42,8 @@ const About = () => {
             </h2>
             <div className="text-gray-300 space-y-4 leading-relaxed">
               <p>
-                Merhaba! Ben Uygar Görmez, Bilgisayar Mühendisiyim. Web sayfası ve mobil
-                uygulamalar üzerinde çalışıp geliştirmeler yapıyorum.
+                Merhaba! Ben Uygar Görmez, Bilgisayar Mühendisiyim. Web sayfası ve mobil uygulamalar üzerinde çalışıp
+                geliştirmeler yapıyorum.
               </p>
               <p>
                 Full-stack development alanında kendimi geliştiriyorum. Modern web teknolojileriyle kullanıcı dostu ve

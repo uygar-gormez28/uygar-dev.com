@@ -45,7 +45,7 @@ const Resume = () => {
       position: "IT Stajyer",
       period: "Şub 2026 - Haz 2026",
       location: "İstanbul, Türkiye",
-      duration: "5 ay",
+      duration: "3.5 ay",
       responsibilities: [
         "Belediye birimlerinden gelen teknik sorunlara yerinde müdahale ederek sistem sürekliliğini sağladım.",
         "Kurumsal ölçekte Windows ve Linux tabanlı sistemlerin kurulum ve konfigürasyon işlemlerini gerçekleştirdim.",
