@@ -28,7 +28,7 @@ const Resume = () => {
       company: "Lotus-AI Yapay Zeka ve Bilişim Çözümleri A.Ş.",
       position: "Software Stajyer",
       period: "Kas 2025 - Oca 2026",
-      location: "İstanbul, Türkiye",
+      location: "Remote, Türkiye",
       duration: "3 ay",
       responsibilities: [
         "KNIME üzerinde veri işleme ve veri akışı (workflow) çalışmaları gerçekleştirdim.",

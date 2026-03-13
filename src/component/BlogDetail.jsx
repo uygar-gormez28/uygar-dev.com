@@ -1,17 +1,16 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Clock, Calendar, User } from 'lucide-react';
-import { posts } from './Blog';
+import React from "react";
+import { useParams, Link } from "react-router-dom";
+import { ArrowLeft, Clock, Calendar, User } from "lucide-react";
+import { posts } from "./Blog";
 
 const BlogDetail = () => {
   const { id } = useParams();
   const post = posts.find((p) => p.id === parseInt(id));
+  const deneme = "deneme";
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center text-white">
-        Blog yazısı bulunamadı
-      </div>
+      <div className="min-h-screen bg-black flex items-center justify-center text-white">Blog yazısı bulunamadı</div>
     );
   }
 
@@ -20,13 +19,12 @@ const BlogDetail = () => {
       {/* Hero Image */}
       <div className="relative h-[60vh] w-full overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black z-10" />
-        <img 
-          src={post.image} 
-          alt={post.title} 
-          className="w-full h-full object-cover"
-        />
+        <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
         <div className="absolute top-8 left-4 md:left-8 z-20">
-          <Link to="/" className="inline-flex items-center text-white/90 hover:text-white bg-black/40 backdrop-blur-md px-4 py-2 rounded-full transition-colors border border-white/10 hover:bg-black/60">
+          <Link
+            to="/"
+            className="inline-flex items-center text-white/90 hover:text-white bg-black/40 backdrop-blur-md px-4 py-2 rounded-full transition-colors border border-white/10 hover:bg-black/60"
+          >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Ana Sayfaya Dön
           </Link>
@@ -51,9 +49,7 @@ const BlogDetail = () => {
               </div>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              {post.title}
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{post.title}</h1>
 
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500" />
@@ -67,9 +63,7 @@ const BlogDetail = () => {
           {/* Content */}
           <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12">
             <div className="prose prose-lg prose-invert max-w-none">
-              <div className="text-gray-300 leading-relaxed whitespace-pre-line">
-                {post.content}
-              </div>
+              <div className="text-gray-300 leading-relaxed whitespace-pre-line">{post.content}</div>
             </div>
 
             {/* Divider */}
