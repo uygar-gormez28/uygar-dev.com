@@ -6,7 +6,6 @@ import { posts } from "./Blog";
 const BlogDetail = () => {
   const { id } = useParams();
   const post = posts.find((p) => p.id === parseInt(id));
-  const deneme = "deneme";
 
   if (!post) {
     return (
