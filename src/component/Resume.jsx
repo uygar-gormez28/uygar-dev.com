@@ -43,9 +43,9 @@ const Resume = () => {
     {
       company: "Gaziosmanpaşa Belediyesi | Bilgi İşlem Müdürlüğü",
       position: "IT Stajyer",
-      period: "Şub 2026 - Haz 2026",
+      period: "Şub 2026 - Devam Ediyor",
       location: "İstanbul, Türkiye",
-      duration: "3.5 ay",
+      duration: "",
       responsibilities: [
         "Belediye birimlerinden gelen teknik sorunlara yerinde müdahale ederek sistem sürekliliğini sağladım.",
         "Kurumsal ölçekte Windows ve Linux tabanlı sistemlerin kurulum ve konfigürasyon işlemlerini gerçekleştirdim.",

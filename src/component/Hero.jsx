@@ -59,7 +59,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl font-medium mb-10 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent inline-block">
-            Bilgisayar Mühendisi | Web Geliştirme & Veri Bilimi{" "}
+            Bilgisayar Mühendisi | Mobil & Web Geliştirme & Veri Bilimi{" "}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

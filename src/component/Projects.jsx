@@ -63,6 +63,35 @@ const Projects = () => {
             </Link>
           ))}
         </div>
+
+        {/* GitHub Yönlendirme */}
+        <div className="text-center mt-16">
+          <p className="text-gray-400 text-sm mb-4">
+            Diğer projelerim için Github hesabıma bakabilirsiniz.
+          </p>
+          <a
+            href="https://github.com/uygar-gormez28"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-base font-semibold hover:scale-105 hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300"
+          >
+            GitHub
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );
