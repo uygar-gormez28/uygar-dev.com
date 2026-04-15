@@ -92,11 +92,13 @@ Yazılımın hem görsel (Frontend) hem de analitik (Veri & ML) tarafında kendi
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import FadeIn from "./FadeIn";
 
 const Blog = () => {
   return (
     <section className="py-20 bg-black min-h-screen">
       <div className="container mx-auto px-4 max-w-6xl">
+        <FadeIn>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -105,7 +107,9 @@ const Blog = () => {
           </h2>
           <p className="text-gray-400 text-lg">Düşüncelerim ve deneyimlerim</p>
         </div>
+        </FadeIn>
 
+        <FadeIn delay={200}>
         <Swiper
           modules={[Autoplay]}
           spaceBetween={32}
@@ -162,6 +166,7 @@ const Blog = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        </FadeIn>
       </div>
     </section>
   );

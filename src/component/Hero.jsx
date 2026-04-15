@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import FadeIn from "./FadeIn";
 
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState("");
@@ -50,25 +51,30 @@ const Hero = () => {
         ></div>
 
         <div className="relative z-10 text-center px-4">
+          <FadeIn>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             Merhaba, Ben{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent inline-block">
+            <span className="bg-gradient-to-r from-[#134E5E] to-[#71B280] bg-clip-text text-transparent inline-block">
               {displayedText}
               <span className="animate-pulse">|</span>
             </span>
           </h1>
+          </FadeIn>
 
-          <p className="text-xl md:text-2xl font-medium mb-10 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent inline-block">
+          <FadeIn delay={200}>
+          <p className="text-xl md:text-2xl font-medium mb-10 bg-gradient-to-r from-[#134E5E] to-[#71B280] bg-clip-text text-transparent inline-block">
             Bilgisayar Mühendisi | Mobil & Web Geliştirme & Veri Bilimi{" "}
           </p>
+          </FadeIn>
 
+          <FadeIn delay={400}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* CV İndir Butonu */}
             <a
               href="/cv/Uygar_G%C3%B6rmez_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-full font-semibold hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 ease-in-out text-center flex items-center justify-center gap-2"
+              className="px-10 py-3 bg-gradient-to-r from-[#134E5E] to-[#71B280] text-white rounded-full font-semibold hover:scale-110 hover:shadow-2xl hover:shadow-[#71B280]/50 transition-all duration-500 ease-in-out text-center flex items-center justify-center gap-2"
             >
               Portfolyo & CV
             </a>
@@ -81,6 +87,7 @@ const Hero = () => {
               İletişime Geç
             </a>
           </div>
+          </FadeIn>
         </div>
       </section>
     </div>

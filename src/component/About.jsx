@@ -1,4 +1,5 @@
 import React from "react";
+import FadeIn from "./FadeIn";
 
 const About = () => {
   const technologies = [
@@ -24,6 +25,7 @@ const About = () => {
     >
       <div className="container mx-auto max-w-6xl">
         {/* ÜST: Daire Fotoğraf (Ortada) */}
+        <FadeIn>
         <div className="flex justify-center mb-16">
           <div className="relative group">
             <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-purple-500/50 hover:border-blue-500 transition-all duration-300 hover:scale-105 shadow-2xl shadow-blue-500/20">
@@ -32,11 +34,13 @@ const About = () => {
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 blur-xl -z-10"></div>
           </div>
         </div>
+        </FadeIn>
 
         {/* ALT: İki Sütun - Yer Değiştirdi */}
         <div className="grid md:grid-cols-2 gap-8">
           {/* SOL: About Me (önceden sağdaydı) */}
-          <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
+          <FadeIn delay={100} className="h-full">
+          <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 h-full">
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Hakkımda
             </h2>
@@ -55,9 +59,11 @@ const About = () => {
               </p>
             </div>
           </div>
+          </FadeIn>
 
           {/* SAĞ: Technologies & Skills (önceden soldaydı) */}
-          <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
+          <FadeIn delay={200} className="h-full">
+          <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 h-full">
             <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
               Kullandığım Teknolojiler
             </h3>
@@ -72,6 +78,7 @@ const About = () => {
               ))}
             </div>
           </div>
+          </FadeIn>
         </div>
       </div>
     </section>

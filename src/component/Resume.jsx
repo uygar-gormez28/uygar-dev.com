@@ -1,4 +1,5 @@
 import React from "react";
+import FadeIn from "./FadeIn";
 
 const Resume = () => {
   const education = {
@@ -59,6 +60,7 @@ const Resume = () => {
     <section className="min-h-screen bg-black py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Başlık */}
+        <FadeIn>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -67,12 +69,14 @@ const Resume = () => {
           </h2>
           <p className="text-gray-400 text-lg">Eğitim, deneyim ve projelerim</p>
         </div>
+        </FadeIn>
 
         {/* Timeline (Eğitim ve Deneyim bölümleri aynı kalıyor) */}
         <div className="relative">
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
 
           {/* EĞİTİM */}
+          <FadeIn delay={100}>
           <div className="mb-12 relative">
             <div className="absolute left-6 w-5 h-5 bg-blue-500 rounded-full border-4 border-gray-900 z-10"></div>
             <div className="ml-20">
@@ -97,10 +101,12 @@ const Resume = () => {
               </div>
             </div>
           </div>
+          </FadeIn>
 
           {/* DENEYİM */}
           {experience.map((exp, index) => (
-            <div key={index} className="mb-12 relative">
+            <FadeIn key={index} delay={(index + 2) * 100}>
+            <div className="mb-12 relative">
               <div className="absolute left-6 w-5 h-5 bg-purple-500 rounded-full border-4 border-gray-900 z-10"></div>
               <div className="ml-20">
                 <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
@@ -126,10 +132,12 @@ const Resume = () => {
                 </div>
               </div>
             </div>
+            </FadeIn>
           ))}
         </div>
 
         {/* CV İNDİRME BUTONU - GÜNCELLENMİŞ KISIM */}
+        <FadeIn delay={400}>
         <div className="text-center mt-12">
           <a
             href="/cv/Uygar_G%C3%B6rmez_CV%20-%20Kopya.pdf"
@@ -148,6 +156,7 @@ const Resume = () => {
             CV İNDİR (PDF)
           </a>
         </div>
+        </FadeIn>
       </div>
     </section>
   );

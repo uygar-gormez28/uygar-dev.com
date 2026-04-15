@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calendar, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import FadeIn from "./FadeIn";
 
 const events = [
   {
@@ -67,6 +68,7 @@ const Certificates = () => {
   return (
     <section id="certificates" className="py-20 bg-black">
       <div className="container mx-auto px-4 max-w-6xl">
+        <FadeIn>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -75,10 +77,12 @@ const Certificates = () => {
           </h2>
           <p className="text-gray-400">Teknoloji etkinlikleri ve konferanslar</p>
         </div>
+        </FadeIn>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {events.map((event) => (
-            <Link to={`/event/${event.id}`} key={event.id} className="group relative bg-white/5 backdrop-blur-sm border border-purple-500/50 rounded-2xl overflow-hidden hover:border-purple-500 transition-all duration-300 block shadow-lg hover:shadow-purple-500/30">
+          {events.map((event, index) => (
+            <FadeIn key={event.id} delay={index * 100} className="h-full">
+            <Link to={`/event/${event.id}`} className="group relative bg-white/5 backdrop-blur-sm border border-purple-500/50 rounded-2xl overflow-hidden hover:border-purple-500 transition-all duration-300 block shadow-lg hover:shadow-purple-500/30 h-full">
               {/* Görsel Alanı - Full width, belirgin */}
               <div className="w-full h-56 overflow-hidden relative">
                  <img 
@@ -109,6 +113,7 @@ const Certificates = () => {
                 </div>
               </div>
             </Link>
+            </FadeIn>
           ))}
         </div>
       </div>

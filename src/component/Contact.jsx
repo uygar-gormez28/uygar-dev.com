@@ -1,4 +1,5 @@
 import React from "react";
+import FadeIn from "./FadeIn";
 
 const Contact = () => {
   const contacts = [
@@ -46,6 +47,7 @@ const Contact = () => {
     <section className="min-h-screen bg-black py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Başlık */}
+        <FadeIn>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -54,12 +56,13 @@ const Contact = () => {
           </h2>
           <p className="text-gray-400 text-lg">Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz</p>
         </div>
+        </FadeIn>
 
         {/* İkonlar Alanı - Flexbox ile Ortalandı */}
         <div className="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
           {contacts.map((contact, index) => (
+            <FadeIn key={index} delay={index * 150}>
             <a
-              key={index}
               href={contact.link}
               target={contact.link.startsWith("mailto:") ? "_self" : "_blank"}
               rel="noopener noreferrer"
@@ -86,6 +89,7 @@ const Contact = () => {
                 <p className="text-gray-400 text-sm">{contact.value}</p>
               </div>
             </a>
+            </FadeIn>
           ))}
         </div>
       </div>
