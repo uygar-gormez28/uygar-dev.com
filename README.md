@@ -25,7 +25,7 @@ Bu proje, bir **Bilgisayar Mühendisi** olarak projelerimi, teknik yetkinlikleri
 ### ✨ Özellikler (Features)
 
 * 📱 **Tam Duyarlı Tasarım:** Mobil, tablet ve masaüstü cihazlar için optimize edilmiş arayüz.
-* 📂 **Dinamik Proje Kartları:** Geliştirdiğim projelerin (Nika, notlarSende vb.) detaylı gösterimi.
+* 📂 **Dinamik Proje Kartları:** Geliştirdiğim projelerin (Certifi, NotlarSende vb.) detaylı gösterimi.
 * 📊 **Staj Deneyimi:** LotusAI bünyesinde tamamladığım Veri Bilimi ve ML stajının detayları.
 * 📧 **İletişim Formu:** Freelance iş teklifleri ve profesyonel bağlantılar için entegre iletişim bölümü.
 

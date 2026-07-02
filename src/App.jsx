@@ -8,17 +8,21 @@ import BlogDetail from "./component/BlogDetail";
 
 import ScrollToTopOnMount from "./component/ScrollToTopOnMount";
 
+import { LanguageProvider } from "./context/LanguageContext";
+
 function App() {
   return (
-    <Router>
-      <ScrollToTopOnMount />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/project/:id" element={<ProjectDetail />} />
-        <Route path="/event/:id" element={<EventDetail />} />
-        <Route path="/blog/:id" element={<BlogDetail />} />
-      </Routes>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <ScrollToTopOnMount />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project/:id" element={<ProjectDetail />} />
+          <Route path="/event/:id" element={<EventDetail />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
+        </Routes>
+      </Router>
+    </LanguageProvider>
   );
 }
 

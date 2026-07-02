@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Github, FileText, ExternalLink, X } from 'lucide-react';
 import { projects } from '../data/projects';
+import { useLanguage } from '../context/LanguageContext';
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
   const [selectedImage, setSelectedImage] = useState(null);
+  const { language } = useLanguage();
 
   if (!project) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center text-white">
-        Proje bulunamadı
+        {language === 'tr' ? "Proje bulunamadı" : "Project not found"}
       </div>
     );
   }
@@ -23,13 +25,13 @@ const ProjectDetail = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black z-10" />
         <img 
           src={project.image} 
-          alt={project.title} 
-          className="w-full h-full object-cover"
+          alt={project.title[language]} 
+          className={`w-full h-full ${project.imageClass || 'object-cover'}`} 
         />
         <div className="absolute top-8 left-4 md:left-8 z-20">
           <Link to="/" className="inline-flex items-center text-white/90 hover:text-white bg-black/40 backdrop-blur-md px-4 py-2 rounded-full transition-colors border border-white/10 hover:bg-black/60">
             <ArrowLeft className="w-5 h-5 mr-2" />
-            Ana Sayfaya Dön
+            {language === 'tr' ? "Ana Sayfaya Dön" : "Back to Home"}
           </Link>
         </div>
       </div>
@@ -39,7 +41,7 @@ const ProjectDetail = () => {
           {/* Header Card */}
           <div className="bg-black/60 backdrop-blur-xl border border-white/10 rounded-3xl p-8 mb-12 shadow-2xl text-center">
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
-              {project.title}
+              {project.title[language]}
             </h1>
             
             {/* Tags - Centered */}
@@ -56,12 +58,12 @@ const ProjectDetail = () => {
           <div className="max-w-3xl mx-auto mb-12">
             <div className="prose prose-lg prose-invert mx-auto">
               <p className="text-gray-300 leading-loose text-lg whitespace-pre-line text-left mb-6">
-                {project.detailedDescription}
+                {project.detailedDescription[language]}
               </p>
               
-              {/* GitHub Button - Small */}
-              {project.github && (
-                <div className="flex justify-center">
+              {/* Buttons */}
+              <div className="flex flex-wrap justify-center gap-4">
+                {project.github && (
                   <a 
                     href={project.github}
                     target="_blank"
@@ -69,10 +71,21 @@ const ProjectDetail = () => {
                     className="inline-flex items-center px-4 py-2 bg-white/5 border border-blue-500/30 hover:border-blue-500 rounded-lg transition-all text-sm text-blue-400 hover:text-blue-300 font-medium"
                   >
                     <Github className="w-4 h-4 mr-2" />
-                    GitHub'da Görüntüle
+                    {language === 'tr' ? "GitHub'da Görüntüle" : "View on GitHub"}
                   </a>
-                </div>
-              )}
+                )}
+                {project.website && (
+                  <a 
+                    href={project.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-2 bg-white/5 border border-purple-500/30 hover:border-purple-500 rounded-lg transition-all text-sm text-purple-400 hover:text-purple-300 font-medium"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    {language === 'tr' ? "Web Sitesini Ziyaret Et" : "Visit Website"}
+                  </a>
+                )}
+              </div>
             </div>
           </div>
 
@@ -80,7 +93,7 @@ const ProjectDetail = () => {
           {project.documents && project.documents.length > 0 && (
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Proje Belgeleri
+                {language === 'tr' ? "Proje Belgeleri" : "Project Documents"}
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
                 {project.documents.map((doc, idx) => (
@@ -104,7 +117,7 @@ const ProjectDetail = () => {
           {project.gallery && project.gallery.length > 0 && (
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Proje Görselleri
+                {language === 'tr' ? "Proje Görselleri" : "Project Gallery"}
               </h2>
               <div className="grid md:grid-cols-3 gap-4">
                 {project.gallery.map((img, index) => (
@@ -115,7 +128,7 @@ const ProjectDetail = () => {
                   >
                     <img 
                       src={img} 
-                      alt={`${project.title} - ${index + 1}`}
+                      alt={`${project.title[language]} - ${index + 1}`}
                       className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>

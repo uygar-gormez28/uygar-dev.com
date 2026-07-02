@@ -1,7 +1,10 @@
 import React from "react";
 import FadeIn from "./FadeIn";
+import { useLanguage } from "../context/LanguageContext";
 
 const Contact = () => {
+  const { language } = useLanguage();
+
   const contacts = [
     {
       icon: (
@@ -48,47 +51,46 @@ const Contact = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Başlık */}
         <FadeIn>
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              İletişim
-            </span>
-          </h2>
-          <p className="text-gray-400 text-lg">Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz</p>
-        </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                {language === 'tr' ? "İletişim" : "Contact"}
+              </span>
+            </h2>
+          </div>
         </FadeIn>
 
         {/* İkonlar Alanı - Flexbox ile Ortalandı */}
         <div className="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
           {contacts.map((contact, index) => (
             <FadeIn key={index} delay={index * 150}>
-            <a
-              href={contact.link}
-              target={contact.link.startsWith("mailto:") ? "_self" : "_blank"}
-              rel="noopener noreferrer"
-              className={`flex flex-col items-center group cursor-pointer`}
-            >
-              {/* Daire */}
-              <div
-                className={`w-40 h-40 rounded-full bg-gradient-to-br ${
-                  contact.color
-                } flex items-center justify-center text-white mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl ${
-                  contact.link && "group-hover:shadow-blue-500/50"
-                } relative`}
+              <a
+                href={contact.link}
+                target={contact.link.startsWith("mailto:") ? "_self" : "_blank"}
+                rel="noopener noreferrer"
+                className="flex flex-col items-center group cursor-pointer"
               >
-                {contact.icon}
-                {/* Glow Efekti */}
+                {/* Daire */}
                 <div
-                  className={`absolute inset-0 rounded-full bg-gradient-to-br ${contact.color} blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 -z-10`}
-                ></div>
-              </div>
+                  className={`w-40 h-40 rounded-full bg-gradient-to-br ${
+                    contact.color
+                  } flex items-center justify-center text-white mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl ${
+                    contact.link && "group-hover:shadow-blue-500/50"
+                  } relative`}
+                >
+                  {contact.icon}
+                  {/* Glow Efekti */}
+                  <div
+                    className={`absolute inset-0 rounded-full bg-gradient-to-br ${contact.color} blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 -z-10`}
+                  ></div>
+                </div>
 
-              {/* Label ve Value */}
-              <div className="text-center">
-                <h3 className="text-white font-bold text-lg mb-1">{contact.label}</h3>
-                <p className="text-gray-400 text-sm">{contact.value}</p>
-              </div>
-            </a>
+                {/* Label ve Value */}
+                <div className="text-center">
+                  <h3 className="text-white font-bold text-lg mb-1">{contact.label}</h3>
+                  <p className="text-gray-400 text-sm">{contact.value}</p>
+                </div>
+              </a>
             </FadeIn>
           ))}
         </div>

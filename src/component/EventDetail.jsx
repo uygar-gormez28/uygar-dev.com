@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, MapPin, X } from 'lucide-react';
 import { events } from './Certificates'; 
+import { useLanguage } from '../context/LanguageContext';
 
 const EventDetail = () => {
   const { id } = useParams();
   const event = events.find((e) => e.id === id);
   const [selectedImage, setSelectedImage] = useState(null);
+  const { language } = useLanguage();
 
   if (!event) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center text-white">
-        Etkinlik bulunamadı
+        {language === 'tr' ? "Etkinlik bulunamadı" : "Event not found"}
       </div>
     );
   }
@@ -23,13 +25,13 @@ const EventDetail = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black z-10" />
         <img 
           src={event.image} 
-          alt={event.title} 
+          alt={event.title[language]} 
           className="w-full h-full object-cover"
         />
         <div className="absolute top-8 left-4 md:left-8 z-20">
           <Link to="/" className="inline-flex items-center text-white/90 hover:text-white bg-black/40 backdrop-blur-md px-4 py-2 rounded-full transition-colors border border-white/10 hover:bg-black/60">
             <ArrowLeft className="w-5 h-5 mr-2" />
-            Ana Sayfaya Dön
+            {language === 'tr' ? "Ana Sayfaya Dön" : "Back to Home"}
           </Link>
         </div>
       </div>
@@ -41,7 +43,7 @@ const EventDetail = () => {
             <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-2">
-                  {event.title}
+                  {event.title[language]}
                 </h1>
                 <p className="text-xl text-gray-300 font-medium">{event.organization}</p>
               </div>
@@ -52,7 +54,7 @@ const EventDetail = () => {
 
             <div className="flex items-center gap-2 text-gray-400">
               <MapPin className="w-5 h-5 text-purple-500" />
-              <span>{event.location}</span>
+              <span>{event.location[language]}</span>
             </div>
           </div>
 
@@ -60,7 +62,7 @@ const EventDetail = () => {
           <div className="max-w-3xl mx-auto mb-12">
             <div className="prose prose-lg prose-invert text-left">
               <p className="text-gray-300 leading-loose text-lg whitespace-pre-line">
-                {event.detailedDescription || event.description}
+                {(event.detailedDescription && event.detailedDescription[language]) || (event.description && event.description[language])}
               </p>
             </div>
           </div>
@@ -69,7 +71,7 @@ const EventDetail = () => {
           {event.gallery && event.gallery.length > 0 && (
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Etkinlik Görselleri
+                {language === 'tr' ? "Etkinlik Görselleri" : "Event Gallery"}
               </h2>
               <div className="grid md:grid-cols-3 gap-4">
                 {event.gallery.map((img, index) => (
@@ -80,7 +82,7 @@ const EventDetail = () => {
                   >
                     <img 
                       src={img} 
-                      alt={`${event.title} - ${index + 1}`}
+                      alt={`${event.title[language]} - ${index + 1}`}
                       className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
