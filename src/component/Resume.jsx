@@ -218,7 +218,7 @@ const Resume = () => {
         <FadeIn delay={400}>
           <div className="text-center mt-12">
             <a
-              href="/cv/Uygar_G%C3%B6rmez_CV.pdf"
+              href="/cv/Uygar_Gormez_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300"

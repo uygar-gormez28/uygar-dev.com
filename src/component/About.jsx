@@ -28,7 +28,7 @@ const About = () => {
 
   const certificates = [
     {
-      name: "Claude 101",
+      name: "Claude Code in Action",
       image: "/sertifika/claude-101.png"
     },
     {
@@ -40,7 +40,7 @@ const About = () => {
       image: "/sertifika/agent-skills.png"
     },
     {
-      name: "AI Fluency for Educators",
+      name: "AI Fluency: Framework & Foundations",
       image: "/sertifika/ai-fluency.png"
     }
   ];
