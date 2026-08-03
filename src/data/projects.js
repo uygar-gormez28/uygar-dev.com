@@ -77,4 +77,43 @@ export const projects = [
     tags: ["Python", "Machine Learning", "SQLite", "Plotly", "Seaborn", "KNIME"],
     documents: [],
   },
+  {
+    id: "akgun",
+    title: {
+      tr: "AKGÜN A.Ş",
+      en: "AKGÜN A.Ş"
+    },
+    description: {
+      tr: "Kendimi geliştirmek amacıyla Enes Bayram'ın eğitim serisini takip ederek geliştirdiğim örnek bir e-ticaret uygulaması (Akgün Ticaret).",
+      en: "A sample e-commerce application (Akgün Ticaret) developed for self-improvement by following Enes Bayram's tutorial series."
+    },
+    detailedDescription: {
+      tr: "Frontend ve web geliştirme becerilerimi pekiştirmek amacıyla Enes Bayram'ın eğitimlerini referans alarak geliştirdiğim Akgün Ticaret e-ticaret uygulaması. Proje kapsamında React, TypeScript ve modern web teknolojilerini kullanarak dinamik ürün listeleme, sepet yönetimi ve responsive arayüz tasarımları üzerinde pratik yapma şansı edindim.",
+      en: "Akgün Ticaret e-commerce application built to practice and consolidate my frontend web development skills by following Enes Bayram's tutorials. Throughout the project, I used React, TypeScript, and modern web technologies to implement dynamic product listing, shopping cart management, and responsive layouts."
+    },
+    image: "/img/akgun.png",
+    github: "https://github.com/uygar-gormez28/AKGUN-TICARET",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
+    documents: [],
+  },
+  {
+    id: "nisankare",
+    title: {
+      tr: "NişanKare",
+      en: "NişanKare"
+    },
+    description: {
+      tr: "Misafirlerin davette çektikleri fotoğrafları QR kod okutarak üyelik gerekmeden Google Drive'da toplayan pratik web uygulaması.",
+      en: "A practical web application that collects photos taken by guests during an event into Google Drive via QR code scanning without registration."
+    },
+    detailedDescription: {
+      tr: "Bir arkadaşımın nişan organizasyonu öncesinde yaşadığı basit ama can sıkıcı bir problem bu projenin çıkış noktası oldu. Organizasyon sonrasında misafirlerin telefonlarında kalan yüzlerce fotoğrafı tek tek istemek, WhatsApp üzerinden kalite kaybıyla toplamak ve dosyaları düzenlemek oldukça zahmetliydi.\n\nBu sorunu çözmek için NişanKare'yi geliştirdim. Davetliler, kendilerine verilen QR kodu okutarak herhangi bir üyelik oluşturmadan veya uygulama indirmeden doğrudan fotoğraflarını yükleyebiliyor. Yüklenen tüm görseller otomatik olarak belirlenen Google Drive klasöründe toplanıyor ve organizasyon sahibi tüm fotoğraflara tek noktadan erişebiliyor.\n\nProjeyi geliştirirken kullanıcı deneyimini ön planda tuttum. Mobil uyumlu, sade ve birkaç saniyede kullanılabilecek bir arayüz tasarladım. Ayrıca Google Drive API entegrasyonu, güvenli dosya yükleme süreci ve sunucu tarafında dosyaların doğrudan hedef klasöre aktarılması gibi teknik detayları da projeye dahil ettim.",
+      en: "A simple but annoying problem a friend experienced before their engagement ceremony became the starting point for this project. Asking for hundreds of photos remaining in guests' phones one by one after the event, collecting them via WhatsApp with quality loss, and organizing files was extremely tedious.\n\nTo solve this issue, I developed NişanKare. Guests can scan a QR code provided to them and upload their photos directly without creating an account or downloading an app. All uploaded images are automatically gathered in a designated Google Drive folder, allowing the organizer to access all photos from a single location.\n\nWhile developing the project, I prioritized user experience. I designed a mobile-compatible, simple interface that can be used in a few seconds. I also incorporated technical details such as Google Drive API integration, secure file uploading process, and server-side direct transfer of files to the target folder."
+    },
+    image: "/img/nisankare.png",
+    github: "https://github.com/uygar-gormez28/NisanKare",
+    website: "https://nisan-kare-5u4taofbf-uygar-gormez.vercel.app/",
+    tags: ["Next.js", "Google Drive API", "Tailwind CSS"],
+    documents: [],
+  },
 ];

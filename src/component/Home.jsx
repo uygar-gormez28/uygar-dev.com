@@ -8,6 +8,7 @@ import Certificates from "./Certificates";
 import Blog from "./Blog";
 import Navbar from "./Navbar";
 import ScrollToTop from "./ScrollToTop";
+import References from "./References";
 import Footer from "./Footer";
 
 const Home = () => {
@@ -30,6 +31,10 @@ const Home = () => {
       
       <section id="resume">
         <Resume />
+      </section>
+      
+      <section id="references">
+        <References />
       </section>
       
       <section id="certificates">

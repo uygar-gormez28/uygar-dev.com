@@ -22,7 +22,7 @@ const About = () => {
     },
     {
       title: "Tools",
-      skills: ["Git", "Docker", "Vercel"],
+      skills: ["Git", "Vercel"],
     },
   ];
 

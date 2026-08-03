@@ -4,6 +4,251 @@ import { useLanguage } from "../context/LanguageContext";
 
 const posts = [
   {
+    id: 5,
+    title: {
+      tr: "Mezuniyet 5 Yıl ne çabuk bitti?",
+      en: "The 5-Year Path to Computer Engineering"
+    },
+    excerpt: {
+      tr: "Hazırlık sınıfından mezuniyete, Nişantaşı Üniversitesi Bilgisayar Mühendisliği bölümünde geçen 5 yıllık yolculuğum ve biriktirdiğim anılar.",
+      en: "My 5-year journey in Computer Engineering at Nişantaşı University, from preparatory school to graduation, and the memories I accumulated."
+    },
+    date: {
+      tr: "17 Temmuz 2026",
+      en: "July 17, 2026"
+    },
+    readTime: "6 min read",
+    author: "Uygar Görmez",
+    category: {
+      tr: "Kariyer",
+      en: "Career"
+    },
+    image: "/img/mezuniyet.png",
+    content: {
+      tr: `Üniversite tercih döneminde açıkçası ne Nişantaşı Üniversitesinde okuyacağımı ne de hazırlık sınıfına kalacağımı düşünüyordum.
+
+Hayat bazen planladığımız gibi ilerlemiyor.
+
+Bir anda kendimi burada buldum ve geriye dönüp baktığımda bunun iyi ki böyle olduğunu düşünüyorum.
+
+İlk yılımı, ileride iş hayatında bana mutlaka faydası olacağını düşündüğüm İngilizce hazırlık okuyarak geçirdim. O yıl sadece İngilizce öğrenmedim; bugün hâlâ görüştüğüm, hayatım boyunca unutmayacağım dostluklar da edindim.
+
+Sonra bölüm başladı.
+
+Vizeler, finaller, bitmeyen ödevler, laboratuvarlar...
+
+Şafak, Ataberk ve Orkun ile defalarca aynı cümleyi kurduk:
+
+"Ulan bu dersi nasıl geçeceğiz?"
+
+Ama üniversite benim için sadece derslerden ibaret değildi.
+
+Bir yandan kendimi geliştirmeye çalıştım.
+
+Stajlar aradım.
+
+Projeler geliştirdim.
+
+Gerçek ürünlerde görev aldım.
+
+Kod yazdım.
+
+Hata yaptım.
+
+Tekrar öğrendim.
+
+Bazen okuldan çıkıp doğrudan staja gittim, bazen geceleri proje yetiştirdim.
+
+Her deneyim bana yeni bir şey kattı.
+
+Üniversitede de unutamayacağım birçok anı biriktirdim.
+
+Ali Hocayla fikir ayrılığı yaşadığım dersler oldu.
+
+Zafer Hocanın dersinden hayatımdaki tek bütünleme sınavına girdim.
+
+Ulaş Hocanın anlattığı dersleri ise gerçekten büyük bir ilgiyle dinledim.
+
+Nişantaşı Üniversitesinin neredeyse her koridorunda vakit geçirdim. Kütüphanesinde saatlerce çalıştım, arkadaşlarımla sayısız anı biriktirdim.
+
+Ve zaman sandığımdan çok daha hızlı geçti.
+
+Bir bakmışım, hazırlık dahil tam 5 yıl geride kalmış.
+
+17 Temmuz'da kepimi havaya attığımda büyük bir mutluluk vardı.
+
+Ama dürüst olmak gerekirse, biraz da hüzün...
+
+Çünkü insan, yıllarca neredeyse her gün gittiği bir yere, kurduğu dostluklara ve yaşadığı anılara kolay kolay veda edemiyor.
+
+Bugün artık Bilgisayar Mühendisliği mezunuyum.
+
+Üniversite bana yalnızca bir diploma vermedi.
+
+Dostluklar kazandırdı.
+
+Deneyimler kazandırdı.
+
+Bazen başarısız olmayı, bazen yeniden başlamayı öğretti.
+
+Ve en önemlisi, bugün olduğum kişiye dönüşmemde büyük bir pay sahibi oldu.
+
+Her şey için teşekkürler, Nişantaşı Üniversitesi.
+
+Yeni bir sayfa başlıyor.`,
+      en: `During the university application period, I honestly didn't think I would study at Nişantaşı University or spend a year in the English preparatory class.
+
+Sometimes life doesn't go as planned.
+
+Suddenly, I found myself here, and looking back, I'm glad it happened this way.
+
+I spent my first year in English prep class, which I thought would definitely benefit me in my future career. That year, I didn't just learn English; I also made friendships that I still maintain today and will never forget.
+
+Then the department classes started.
+
+Midterms, finals, endless homework assignments, labs...
+
+Şafak, Ataberk, and Orkun and I said the same sentence multiple times:
+
+"Man, how are we going to pass this class?"
+
+But university was not just about classes for me.
+
+At the same time, I tried to improve myself.
+
+I searched for internships.
+
+I developed projects.
+
+I worked on real products.
+
+I coded.
+
+I made mistakes.
+
+I relearned.
+
+Sometimes I went directly to an internship after school, sometimes I worked through the nights to finish projects.
+
+Every experience added something new to my life.
+
+I accumulated many unforgettable memories at the university as well.
+
+There were classes where I had differences of opinion with Mr. Ali.
+
+I took my only make-up exam in my life in Mr. Zafer's class.
+
+And I listened to the lectures by Mr. Ulaş with great interest.
+
+I spent time in almost every corridor of Nişantaşı University. I studied in its library for hours, making countless memories with my friends.
+
+And time passed much faster than I thought.
+
+Suddenly, 5 full years had passed, including the prep year.
+
+When I threw my graduation cap into the air on July 17, there was great happiness.
+
+But to be honest, also a bit of sadness...
+
+Because it is not easy to say goodbye to a place you went to almost every day for years, to the friendships you built, and the memories you lived.
+
+Today, I am a graduate of Computer Engineering.
+
+University didn't just give me a diploma.
+
+It brought me friendships.
+
+It gave me experience.
+
+It taught me sometimes to fail, and sometimes to start over.
+
+And most importantly, it played a big part in who I am today.
+
+Thank you for everything, Nişantaşı University.
+
+A new chapter begins.`
+    }
+  },
+  {
+    id: 4,
+    title: {
+      tr: "Max Potential Stajım: Bir Telefonla Başlayan Yolculuk",
+      en: "My Max Potential Internship: A Journey That Started with a Phone Call"
+    },
+    excerpt: {
+      tr: "Belediyedeki zorunlu stajım devam ederken okuldan gelen beklenmedik telefonla başlayan ve Max Potential'da Certifi projesiyle devam eden staj deneyimim.",
+      en: "My internship experience at Max Potential starting with an unexpected phone call while interning at the municipality, and continuing with the Certifi project."
+    },
+    date: {
+      tr: "1 Temmuz 2026",
+      en: "July 1, 2026"
+    },
+    readTime: "5 min read",
+    author: "Uygar Görmez",
+    category: {
+      tr: "Kariyer",
+      en: "Career"
+    },
+    image: "/img/max-potential.png",
+    imageClass: "object-contain bg-[#1b1b1b]",
+    content: {
+      tr: `Belediyedeki zorunlu stajım devam ederken okuldan beklemediğim bir telefon aldım.
+
+Bir yazılım şirketiyle yürütülecek yeni bir proje için öğrenci aranıyordu ve mülakata katılmam istendi. Görüşmeleri tamamladıktan sonra adaylar arasından seçildim.
+
+Aslında önümde bir karar vardı.
+
+Zorunlu stajımın bitmesine yaklaşık bir ay kalmıştı. Mevcut düzenime devam edebilirdim ya da özel sektörde gerçek bir ürün geliştirme sürecinin parçası olabilmek için yeni bir risk alabilirdim.
+
+İkinci yolu seçtim.
+
+Belediyedeki çalışma arkadaşlarımla vedalaştıktan sonra uzaktan çalışarak Max Potential ekibine katıldım. Bu süreçte takım liderim Can Ortak ile birlikte, şirketin yeni nesil LMS platformu olan Certifi üzerinde çalışmaya başladım.
+
+Yaklaşık iki ay boyunca yalnızca kod yazmadım; gerçek bir yazılım ürününün nasıl tasarlandığını, geliştirildiğini ve olgunlaştırıldığını deneyimledim.
+
+Projede ağırlıklı olarak Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Vercel ve Git/GitHub teknolojileriyle çalıştım. Eğitim yönetim sistemi mimarisi, rol bazlı yetkilendirme, içerik yönetimi, beyaz etiket (white-label) yapı, dosya yönetimi ve modern frontend geliştirme süreçleri üzerine yoğunlaştım.
+
+Süreç boyunca Hamdi Bey ve Gökhan Bey ile düzenli haftalık toplantılara katıldım, projenin teknik yönü kadar iş tarafını da yakından gözlemleme fırsatı buldum. Veritabanı tarafında ise Berk ile birlikte çalışarak birçok geliştirmeyi ortak şekilde ilerlettik.
+
+Kolay bir süreç değildi.
+
+Bazı geceler saatlerce tek bir problemi çözmeye çalıştım. Defalarca tasarım değiştirdim, kod refactor ettim, yeni teknolojiler öğrendim ve bazen sabaha kadar çalıştığım günler oldu.
+
+Ama dönüp baktığımda bunun karşılığını fazlasıyla aldığımı düşünüyorum.
+
+Bu staj bana sadece teknik bilgi kazandırmadı; sorumluluk almayı, ekip içinde üretmeyi, profesyonel yazılım geliştirme kültürünü ve bir ürünün gerçekten nasıl ortaya çıktığını öğretti.
+
+Bugün geriye baktığımda, kariyerimdeki en değerli deneyimlerden biri olarak görüyorum.`,
+      en: `While my mandatory internship at the municipality was continuing, I received an unexpected phone call from my university.
+
+They were looking for a student for a new project to be carried out with a software company, and I was asked to attend an interview. After completing the interviews, I was selected among the candidates.
+
+Actually, I had a decision to make.
+
+There was about a month left until the end of my mandatory internship. I could continue with my current routine, or I could take a new risk to be part of a real product development process in the private sector.
+
+I chose the second path.
+
+After saying goodbye to my colleagues at the municipality, I joined the Max Potential team, working remotely. In this process, together with my team lead Can Ortak, I started working on Certifi, the company's next-generation LMS platform.
+
+For about two months, I didn't just write code; I experienced how a real software product is designed, developed, and matured.
+
+In the project, I mainly worked with Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Vercel, and Git/GitHub technologies. I focused on learning management system architecture, role-based access control (RBAC), content management, white-label structure, file management, and modern frontend development processes.
+
+Throughout the process, I attended regular weekly meetings with Mr. Hamdi and Mr. Gökhan, finding the opportunity to closely observe the business side of the project as much as its technical side. On the database side, I worked with Berk, developing many features in collaboration.
+
+It wasn't an easy process.
+
+Some nights, I spent hours trying to solve a single problem. I changed designs multiple times, refactored code, learned new technologies, and there were days when I worked until morning.
+
+But looking back, I think I got more than my share in return.
+
+This internship didn't just give me technical knowledge; it taught me how to take responsibility, produce within a team, professional software development culture, and how a product actually comes to life.
+
+Looking back today, I see it as one of the most valuable experiences of my career.`
+    }
+  },
+  {
     id: 3,
     title: {
       tr: "G.O.P Belediyesi | Bilgi İşlem Müdürlüğü Yeni IT stajım",
@@ -181,7 +426,7 @@ By developing myself in both the visual (Frontend) and analytical (Data & ML) as
 ];
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import FadeIn from "./FadeIn";
 
@@ -191,9 +436,10 @@ const Blog = () => {
   return (
     <section className="py-20 bg-black min-h-screen">
       <div className="container mx-auto px-4 max-w-6xl">
+        {/* Başlık Ortalandı */}
         <FadeIn>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold">
               <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 {language === 'tr' ? "Blog" : "Blog"}
               </span>
@@ -201,63 +447,75 @@ const Blog = () => {
           </div>
         </FadeIn>
 
+        {/* Swiper Slider + Sağ/Sol Yönlendirme İkonları Yan Yana */}
         <FadeIn delay={200}>
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={32}
-            slidesPerView={1}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            breakpoints={{
-              640: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 2,
-              },
-            }}
-            className="blog-swiper pb-12"
-          >
-            {posts.map((post) => (
-              <SwiperSlide key={post.id} className="h-auto">
-                <Link
-                  to={`/blog/${post.id}`}
-                  className="group relative bg-white/5 backdrop-blur-sm border border-purple-500/50 rounded-2xl overflow-hidden hover:border-purple-500 transition-all duration-300 flex flex-col shadow-lg hover:shadow-purple-500/30 h-full"
-                >
-                  <div className="h-48 overflow-hidden relative shrink-0">
-                    <img
-                      src={post.image}
-                      alt={post.title[language]}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-8 flex flex-col grow">
-                    <h3 className="text-2xl font-bold text-white mb-4 tracking-tight line-clamp-2 min-h-[64px]">
-                      {post.title[language]}
-                    </h3>
+          <div className="relative max-w-5xl mx-auto px-4 md:px-0">
+            {/* Sol Buton */}
+            <button className="blog-prev absolute left-2 md:-left-16 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full border border-purple-500/50 bg-black/60 backdrop-blur-sm text-purple-400 flex items-center justify-center hover:bg-purple-500 hover:text-white transition-all duration-300 shadow-lg hover:shadow-purple-500/20 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed">
+              <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
 
-                    <p className="text-gray-300 mb-6 leading-relaxed text-base font-light line-clamp-3 min-h-[72px]">
-                      {post.excerpt[language]}
-                    </p>
-
-                    <div className="flex items-center justify-between border-t border-white/10 pt-4 mt-auto">
-                      <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500" />
-                        <span className="text-sm text-gray-300">{post.author}</span>
+            <div className="px-8 md:px-0">
+              <Swiper
+                modules={[Navigation]}
+                navigation={{
+                  prevEl: ".blog-prev",
+                  nextEl: ".blog-next",
+                }}
+                spaceBetween={24}
+                slidesPerView={1}
+                loop={true}
+                breakpoints={{
+                  768: {
+                    slidesPerView: 2, // Tablet ve masaüstünde yan yana maksimum 2 kart
+                  },
+                }}
+                className="blog-swiper pb-4"
+              >
+                {posts.map((post) => (
+                  <SwiperSlide key={post.id} className="h-auto">
+                    <Link
+                      to={`/blog/${post.id}`}
+                      className="group relative bg-white/5 backdrop-blur-sm border border-purple-500/50 rounded-2xl overflow-hidden hover:border-purple-500 transition-all duration-300 flex flex-col shadow-lg hover:shadow-purple-500/30 h-full"
+                    >
+                      {/* Görsel Yüksekliği Artırıldı */}
+                      <div className="h-48 overflow-hidden relative shrink-0">
+                        <img
+                          src={post.image}
+                          alt={post.title[language]}
+                          className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${post.imageClass || 'object-cover'}`}
+                        />
                       </div>
-                      <span className="text-sm text-gray-500">{post.date[language]}</span>
-                    </div>
-                  </div>
-                </Link>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                      {/* İçerik Boşlukları ve Yazı Boyutları Küçültüldü */}
+                      <div className="p-5 flex flex-col grow">
+                        <h3 className="text-lg font-bold text-white mb-3 tracking-tight line-clamp-2 min-h-[56px] group-hover:text-purple-400 transition-colors">
+                          {post.title[language]}
+                        </h3>
+
+                        <p className="text-gray-400 mb-4 leading-relaxed text-xs font-light line-clamp-3 min-h-[54px]">
+                          {post.excerpt[language]}
+                        </p>
+
+                        {/* Yazar kaldırıldı, tarih üstündeki çizgi kaldırıldı ve yukarı alındı */}
+                        <div className="flex justify-end mt-auto">
+                          <span className="text-xs text-gray-500">{post.date[language]}</span>
+                        </div>
+                      </div>
+                    </Link>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+
+            {/* Sağ Buton */}
+            <button className="blog-next absolute right-2 md:-right-16 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full border border-purple-500/50 bg-black/60 backdrop-blur-sm text-purple-400 flex items-center justify-center hover:bg-purple-500 hover:text-white transition-all duration-300 shadow-lg hover:shadow-purple-500/20 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed">
+              <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </FadeIn>
       </div>
     </section>
