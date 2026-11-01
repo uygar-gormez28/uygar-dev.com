@@ -5,7 +5,7 @@ import { useLanguage } from "../context/LanguageContext";
 const Resume = () => {
   const { language } = useLanguage();
 
-  const education = language === 'tr' ? {
+  const primaryEducation = language === 'tr' ? {
     school: "Nişantaşı Üniversitesi",
     degree: "Bilgisayar Mühendisliği",
     period: "2021 - 2026",
@@ -44,6 +44,24 @@ const Resume = () => {
         education at Istanbul Nişantaşı University.
       </>,
       "Graduated from the Computer Engineering undergraduate program.",
+    ],
+  };
+
+  const secondEducation = language === 'tr' ? {
+    school: "Anadolu Üniversitesi",
+    degree: "Yapay Zekâ Destekli Kodlama",
+    period: "Ekim 2026 - Devam Ediyor",
+    location: "Açıköğretim, Türkiye",
+    details: [
+      "Yapay Zekâ Destekli Kodlama ön lisans programında eğitimime devam ediyorum.",
+    ],
+  } : {
+    school: "Anadolu University",
+    degree: "AI-Assisted Coding",
+    period: "Oct 2026 - Contiune",
+    location: "Open Education, Turkey",
+    details: [
+      "Continuing my education in the AI-Assisted Coding associate degree program.",
     ],
   };
 
@@ -155,7 +173,7 @@ const Resume = () => {
         <div className="relative">
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
 
-          {/* EĞİTİM */}
+          {/* EĞİTİM - Nişantaşı Üniversitesi */}
           <FadeIn delay={100}>
             <div className="mb-12 relative">
               <div className="absolute left-6 w-5 h-5 bg-blue-500 rounded-full border-4 border-gray-900 z-10"></div>
@@ -165,14 +183,14 @@ const Resume = () => {
                     <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold">
                       {language === 'tr' ? "EĞİTİM" : "EDUCATION"}
                     </span>
-                    <span className="text-gray-400 text-sm">{education.period}</span>
+                    <span className="text-gray-400 text-sm">{primaryEducation.period}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{education.school}</h3>
-                  <p className="text-purple-400 font-semibold mb-3">{education.degree}</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{primaryEducation.school}</h3>
+                  <p className="text-purple-400 font-semibold mb-3">{primaryEducation.degree}</p>
                   <ul className="space-y-2 mb-4">
-                    {education.details.map((detail, idx) => (
+                    {primaryEducation.details.map((detail, idx) => (
                       <li key={idx} className="text-gray-300 text-sm leading-relaxed flex items-start">
-                        <span className="text-blue-400 mr-2">•</span>
+                        <span className="text-blue-400 mr-2 shrink-0">•</span>
                         <span>{detail}</span>
                       </li>
                     ))}
@@ -212,6 +230,33 @@ const Resume = () => {
               </div>
             </FadeIn>
           ))}
+
+          {/* İKİNCİ EĞİTİM - Anadolu Üniversitesi */}
+          <FadeIn delay={(experience.length + 2) * 100}>
+            <div className="mb-12 relative">
+              <div className="absolute left-6 w-5 h-5 bg-blue-500 rounded-full border-4 border-gray-900 z-10"></div>
+              <div className="ml-20">
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-md rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold">
+                      {language === 'tr' ? "EĞİTİM" : "EDUCATION"}
+                    </span>
+                    <span className="text-gray-400 text-sm">{secondEducation.period}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{secondEducation.school}</h3>
+                  <p className="text-purple-400 font-semibold mb-3">{secondEducation.degree}</p>
+                  <ul className="space-y-2 mb-4">
+                    {secondEducation.details.map((detail, idx) => (
+                      <li key={idx} className="text-gray-300 text-sm leading-relaxed flex items-start">
+                        <span className="text-blue-400 mr-2 shrink-0">•</span>
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
         </div>
 
         {/* CV İNDİRME BUTONU - GÜNCELLENMİŞ KISIM */}
