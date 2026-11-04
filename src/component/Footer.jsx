@@ -5,17 +5,34 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { language } = useLanguage();
 
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer className="bg-black border-t border-white/10 py-6">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <p className="text-gray-400 text-sm">
-            © {currentYear}{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-semibold">
-              Uygar Görmez
+    <footer className="bg-bg-primary border-t border-white/[0.06] py-10 px-4">
+      <div className="max-w-container mx-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleScrollToTop}
+              className="text-left font-heading font-semibold text-white hover:text-purple-300 transition-colors cursor-pointer"
+            >
+              uygar<span className="text-purple-400">.dev</span>
+            </button>
+            <span className="text-content-muted text-xs">•</span>
+            <span className="text-xs text-content-secondary">
+              Full Stack Developer
             </span>
+          </div>
+
+          <p className="text-content-secondary text-xs sm:text-sm">
+            © {currentYear}{" "}
+            <span className="text-white font-medium">Uygar Görmez</span>
             {language === 'tr' ? ". Tüm hakları saklıdır." : ". All rights reserved."}
           </p>
+
         </div>
       </div>
     </footer>

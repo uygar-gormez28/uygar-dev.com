@@ -47,53 +47,59 @@ const Contact = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-black py-20 px-4">
+    <section id="contact" className="py-20 px-4 bg-bg-primary relative border-t border-white/[0.04]">
       <div className="container mx-auto max-w-6xl">
-        {/* Başlık */}
+        
+        {/* Section Heading */}
         <FadeIn>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading">
+              <span className="text-gradient">
                 {language === 'tr' ? "İletişim" : "Contact"}
               </span>
             </h2>
           </div>
         </FadeIn>
 
-        {/* İkonlar Alanı - Flexbox ile Ortalandı */}
-        <div className="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
+        {/* Contacts Area */}
+        <div className="flex flex-wrap justify-center gap-10 sm:gap-14 max-w-5xl mx-auto">
           {contacts.map((contact, index) => (
-            <FadeIn key={index} delay={index * 150}>
+            <FadeIn key={contact.label} delay={index * 150}>
               <a
                 href={contact.link}
                 target={contact.link.startsWith("mailto:") ? "_self" : "_blank"}
                 rel="noopener noreferrer"
                 className="flex flex-col items-center group cursor-pointer"
               >
-                {/* Daire */}
+                {/* Circle */}
                 <div
-                  className={`w-40 h-40 rounded-full bg-gradient-to-br ${
+                  className={`w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full bg-gradient-to-br ${
                     contact.color
                   } flex items-center justify-center text-white mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl ${
                     contact.link && "group-hover:shadow-blue-500/50"
-                  } relative`}
+                  } relative shadow-xl`}
                 >
                   {contact.icon}
-                  {/* Glow Efekti */}
+                  {/* Glow Effect */}
                   <div
-                    className={`absolute inset-0 rounded-full bg-gradient-to-br ${contact.color} blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 -z-10`}
-                  ></div>
+                    className={`absolute inset-0 rounded-full bg-gradient-to-br ${contact.color} blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300 -z-10`}
+                  />
                 </div>
 
-                {/* Label ve Value */}
+                {/* Label and Value */}
                 <div className="text-center">
-                  <h3 className="text-white font-bold text-lg mb-1">{contact.label}</h3>
-                  <p className="text-gray-400 text-sm">{contact.value}</p>
+                  <h3 className="text-white font-bold text-base sm:text-lg mb-1 group-hover:text-purple-300 transition-colors">
+                    {contact.label}
+                  </h3>
+                  <p className="text-gray-400 text-xs sm:text-sm font-medium">
+                    {contact.value}
+                  </p>
                 </div>
               </a>
             </FadeIn>
           ))}
         </div>
+
       </div>
     </section>
   );

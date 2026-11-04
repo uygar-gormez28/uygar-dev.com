@@ -4,6 +4,7 @@ import Contact from "./Contact";
 import Hero from "./Hero";
 import Projects from "./Projects";
 import Resume from "./Resume";
+import References from "./References";
 import Certificates from "./Certificates";
 import Blog from "./Blog";
 import Navbar from "./Navbar";
@@ -30,6 +31,10 @@ const Home = () => {
       
       <section id="resume">
         <Resume />
+      </section>
+
+      <section id="references">
+        <References />
       </section>
       
       <section id="certificates">
