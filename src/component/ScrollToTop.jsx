@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUp } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { language } = useLanguage();
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 400) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     };
 
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
@@ -24,18 +25,16 @@ const ScrollToTop = () => {
     });
   };
 
+  if (!isVisible) return null;
+
   return (
-    <>
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white shadow-lg hover:shadow-purple-500/50 hover:scale-110 transition-all duration-300 flex items-center justify-center group"
-          aria-label="Yukarı Git"
-        >
-          <ArrowUp className="w-6 h-6 group-hover:animate-bounce" />
-        </button>
-      )}
-    </>
+    <button
+      onClick={scrollToTop}
+      className="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-[#101116]/80 hover:bg-purple-600 text-white border border-white/10 hover:border-purple-400 backdrop-blur-md shadow-xl hover:shadow-purple-500/20 hover:scale-105 active:scale-95 transition-all duration-200 flex items-center justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500/50 text-base font-semibold"
+      aria-label={language === 'tr' ? "Yukarı Kaydır" : "Scroll to Top"}
+    >
+      ↑
+    </button>
   );
 };
 

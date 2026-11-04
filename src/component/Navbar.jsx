@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Navbar = () => {
@@ -8,55 +7,56 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('#home');
   const { language, toggleLanguage } = useLanguage();
 
-  const navLinks = language === 'tr' ? [
-    { name: 'Ana Sayfa', href: '#home' },
-    { name: 'Hakkımda', href: '#about' },
-    { name: 'Projeler', href: '#projects' },
-    { name: 'Özgeçmiş', href: '#resume' },
-    { name: 'Etkinlikler', href: '#certificates' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'İletişim', href: '#contact' },
-  ] : [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Resume', href: '#resume' },
-    { name: 'Events', href: '#certificates' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
-  ];
+  const navLinks = useMemo(() => {
+    return language === 'tr' ? [
+      { name: 'Ana Sayfa', href: '#home' },
+      { name: 'Hakkımda', href: '#about' },
+      { name: 'Projeler', href: '#projects' },
+      { name: 'Özgeçmiş', href: '#resume' },
+      { name: 'Referanslar', href: '#references' },
+      { name: 'Etkinlikler', href: '#certificates' },
+      { name: 'Blog', href: '#blog' },
+      { name: 'İletişim', href: '#contact' },
+    ] : [
+      { name: 'Home', href: '#home' },
+      { name: 'About', href: '#about' },
+      { name: 'Projects', href: '#projects' },
+      { name: 'Resume', href: '#resume' },
+      { name: 'References', href: '#references' },
+      { name: 'Events', href: '#certificates' },
+      { name: 'Blog', href: '#blog' },
+      { name: 'Contact', href: '#contact' },
+    ];
+  }, [language]);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      
-      // Edge case: Top of the page
-      if (window.scrollY < 80) {
+      setIsScrolled(window.scrollY > 30);
+
+      if (window.scrollY < 100) {
         setActiveSection('#home');
-      }
-      // Edge case: Bottom of the page
-      else if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80) {
+      } else if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100) {
         setActiveSection('#contact');
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '-30% 0px -60% 0px',
+      rootMargin: '-20% 0px -55% 0px',
       threshold: 0,
     };
 
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const isAtTop = window.scrollY < 80;
-          const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80;
-          
+          const isAtTop = window.scrollY < 100;
+          const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
+
           if (!isAtTop && !isAtBottom) {
             setActiveSection(`#${entry.target.id}`);
           }
@@ -76,16 +76,16 @@ const Navbar = () => {
     return () => {
       observer.disconnect();
     };
-  }, [language]); // Re-observe when links change on language toggle
+  }, [navLinks]);
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
     setActiveSection(href);
-    
+
     const element = document.querySelector(href);
     if (element) {
-      const offset = 80; // navbar height
+      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -97,28 +97,26 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'bg-black/60 backdrop-blur-xl shadow-lg'
-          : 'bg-transparent'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-[#08090D]/85 backdrop-blur-xl border-b border-white/[0.08] shadow-lg shadow-black/40'
+        : 'bg-transparent border-b border-transparent'
+        }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Mobile Menu Button (Left on mobile, hidden on desktop) */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+
+          {/* Logo / Simple authentic branding */}
+          <a
+            href="#home"
+            onClick={(e) => handleNavClick(e, '#home')}
+            className="font-heading font-semibold text-lg sm:text-xl tracking-tight text-white hover:text-purple-300 transition-colors cursor-pointer"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            uygar<span className="text-purple-400">.dev</span>
+          </a>
 
-          {/* Desktop Spacer to balance menu centering */}
-          <div className="hidden md:block w-24"></div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8 mx-auto">
+          {/* Desktop Navigation Links with minimal underline indicator */}
+          <nav className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href;
               return (
@@ -126,58 +124,71 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`text-gray-300 hover:text-white transition-colors relative group ${
-                    isActive ? 'text-white font-medium' : ''
-                  }`}
+                  className={`py-1 text-sm font-medium transition-colors relative group ${isActive
+                    ? 'text-white font-semibold'
+                    : 'text-content-secondary hover:text-white'
+                    }`}
                 >
                   {link.name}
+                  {/* Underline indicator */}
                   <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 ${
-                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                    }`}
-                  ></span>
+                    className={`absolute -bottom-1 left-0 h-[2px] bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                  />
                 </a>
               );
             })}
-          </div>
+          </nav>
 
-          {/* Language Toggle (Right side on mobile and desktop) */}
-          <div className="flex items-center gap-4">
+          {/* Right Area: Language Switcher & Mobile Menu Button */}
+          <div className="flex items-center gap-3">
             <button
               onClick={toggleLanguage}
-              className="px-3.5 py-1.5 rounded-full text-xs font-bold border border-white/20 text-gray-300 hover:text-white hover:border-white transition-all bg-white/5 backdrop-blur-md cursor-pointer flex items-center gap-1 shadow-sm uppercase tracking-wider"
+              aria-label={language === 'tr' ? "Switch to English" : "Türkçe diline geç"}
+              className="px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 text-content-secondary hover:text-white hover:border-white/25 transition-all bg-white/[0.03] backdrop-blur-md flex items-center gap-1.5 shadow-sm uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-purple-500/50 cursor-pointer"
             >
-              <span className={language === 'tr' ? 'text-blue-400 font-extrabold' : 'text-gray-500 font-medium'}>TR</span>
-              <span className="text-gray-600">/</span>
-              <span className={language === 'en' ? 'text-blue-400 font-extrabold' : 'text-gray-500 font-medium'}>EN</span>
+              <span className={language === 'tr' ? 'text-blue-400 font-bold' : 'text-gray-500'}>TR</span>
+              <span className="text-gray-600 text-[10px]">/</span>
+              <span className={language === 'en' ? 'text-purple-400 font-bold' : 'text-gray-500'}>EN</span>
+            </button>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Menüyü Kapat" : "Menüyü Aç"}
+              aria-expanded={isMobileMenuOpen}
+              className="lg:hidden text-content-secondary hover:text-white p-2 hover:bg-white/10 rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500/50 cursor-pointer flex items-center justify-center w-9 h-9 text-lg"
+            >
+              {isMobileMenuOpen ? "✕" : "☰"}
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/10 bg-black/90 backdrop-blur-xl">
-            {navLinks.map((link) => {
-              const isActive = activeSection === link.href;
-              return (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className={`block py-3 px-4 transition-colors rounded-lg ${
-                    isActive
-                      ? 'text-white bg-white/10 font-medium'
-                      : 'text-gray-300 hover:text-white hover:bg-white/5'
-                  }`}
-                >
-                  {link.name}
-                </a>
-              );
-            })}
+          <div className="lg:hidden py-4 border-t border-white/[0.08] bg-[#0A0C12]/95 backdrop-blur-2xl rounded-2xl mb-4 px-2 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="flex flex-col gap-1">
+              {navLinks.map((link) => {
+                const isActive = activeSection === link.href;
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className={`block py-2.5 px-4 rounded-xl text-sm font-medium transition-all ${isActive
+                      ? 'text-white bg-white/[0.1] font-semibold text-purple-300'
+                      : 'text-content-secondary hover:text-white hover:bg-white/[0.04]'
+                      }`}
+                  >
+                    {link.name}
+                  </a>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>
-    </nav>
+    </header>
   );
 };
 
