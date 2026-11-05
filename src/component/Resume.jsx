@@ -7,21 +7,47 @@ const Resume = () => {
 
   const timelineList = language === 'tr' ? [
     {
+      badge: "EĞİTİM",
+      dotColor: "bg-blue-500",
+      badgeColor: "bg-blue-500/20 text-blue-400",
+      bulletColor: "text-blue-400",
+      title: "Nişantaşı Üniversitesi",
+      subtitle: "Bilgisayar Mühendisliği (Lisans)",
+      period: "Eyl 2021 - Tem 2026",
+      duration: "5 yıl",
+      location: "İstanbul, Türkiye",
+      items: [
+        <>
+          İstanbul Nişantaşı Üniversitesi bünyesinde,{" "}
+          <a
+            href="/sertifika/B2%20Level.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-500/50 hover:decoration-blue-400 transition-all font-medium"
+          >
+            B2 Seviye İngilizce Hazırlık
+          </a>{" "}
+          eğitimini başarıyla tamamladım.
+        </>,
+        "Bilgisayar Mühendisliği lisans programından mezun oldum.",
+      ],
+    },
+    {
       badge: "DENEYİM",
       dotColor: "bg-purple-500",
       badgeColor: "bg-purple-500/20 text-purple-400",
       bulletColor: "text-purple-400",
-      title: "Max Potential Sporcu Kuluçka Merkezi",
-      subtitle: "Yazılım Stajyeri (LMS Proje Sorumlusu)",
-      period: "Mayıs 2026 - Haziran 2026",
-      duration: "2 ay",
-      location: "İstanbul, Türkiye",
+      title: "Lotus-AI Yapay Zeka ve Bilişim Çözümleri A.Ş.",
+      subtitle: "Yazılım Stajyeri",
+      period: "Kas 2025 - Oca 2026",
+      duration: "3 ay",
+      location: "Remote, Türkiye",
       items: [
-        <>Sporcu gelişimine odaklanan <strong className="font-semibold text-white">Certifi Learning Management System (LMS)</strong> platformunun geliştirme sürecinde aktif yazılım geliştiricisi olarak görev aldım.</>,
-        <><strong className="font-semibold text-white">Next.js, React, TypeScript, Tailwind CSS ve Supabase</strong> teknolojilerini kullanarak öğrenci, eğitmen ve yönetici panellerinin geliştirilmesine katkı sağladım.</>,
-        <>Eğitim programları, içerik yönetimi, sertifikalar, kullanıcı deneyimi ve modern arayüz bileşenleri gibi birçok modülün geliştirilmesinde aktif rol aldım.</>,
-        <>Ekip arkadaşları ve proje yöneticileri ile gerçekleştirilen haftalık sprint ve değerlendirme toplantılarına katılarak geliştirme süreçlerini planladım, geri bildirimler doğrultusunda sistemi sürekli iyileştirdim.</>,
-        <>Git tabanlı geliştirme süreçlerinde görev alarak versiyon kontrolü, kod düzeni ve ekip içi iş akışlarına uygun şekilde geliştirmeler gerçekleştirdim.</>,
+        <>KNIME üzerinde veri işleme ve workflow geliştirme süreçlerinde görev alarak veri hazırlama ve analiz çalışmalarına katkı sağladım.</>,
+        <><strong className="font-semibold text-white">Python, SQLite, Plotly ve Pandas</strong> kullanarak veri analizi, ETL süreçleri ve temel makine öğrenmesi uygulamaları geliştirdim.</>,
+        <><strong className="font-semibold text-white">Matplotlib</strong> ile veri görselleştirme çalışmaları gerçekleştirerek analiz sonuçlarının raporlanmasına katkıda bulundum.</>,
+        <>Yapay zekâ destekli fitoterapi (bitkisel tedavi) araştırması kapsamında literatür incelemeleri ve akademik araştırma süreçlerinde görev aldım.</>,
+        <>Geliştirdiğim çalışmaların ilerleyişini günlük faaliyet raporları ve haftalık teknik sunumlarla düzenli olarak dokümante ederek proje süreçlerine katkı sağladım.</>,
       ],
     },
     {
@@ -45,17 +71,17 @@ const Resume = () => {
       dotColor: "bg-purple-500",
       badgeColor: "bg-purple-500/20 text-purple-400",
       bulletColor: "text-purple-400",
-      title: "Lotus-AI Yapay Zeka ve Bilişim Çözümleri A.Ş.",
-      subtitle: "Yazılım Stajyeri",
-      period: "Kas 2025 - Oca 2026",
-      duration: "3 ay",
-      location: "Remote, Türkiye",
+      title: "Max Potential Sporcu Kuluçka Merkezi",
+      subtitle: "Yazılım Stajyeri (LMS Proje Sorumlusu)",
+      period: "Mayıs 2026 - Haziran 2026",
+      duration: "2 ay",
+      location: "İstanbul, Türkiye",
       items: [
-        <>KNIME üzerinde veri işleme ve workflow geliştirme süreçlerinde görev alarak veri hazırlama ve analiz çalışmalarına katkı sağladım.</>,
-        <><strong className="font-semibold text-white">Python, SQLite, Plotly ve Pandas</strong> kullanarak veri analizi, ETL süreçleri ve temel makine öğrenmesi uygulamaları geliştirdim.</>,
-        <><strong className="font-semibold text-white">Matplotlib</strong> ile veri görselleştirme çalışmaları gerçekleştirerek analiz sonuçlarının raporlanmasına katkıda bulundum.</>,
-        <>Yapay zekâ destekli fitoterapi (bitkisel tedavi) araştırması kapsamında literatür incelemeleri ve akademik araştırma süreçlerinde görev aldım.</>,
-        <>Geliştirdiğim çalışmaların ilerleyişini günlük faaliyet raporları ve haftalık teknik sunumlarla düzenli olarak dokümante ederek proje süreçlerine katkı sağladım.</>,
+        <>Sporcu gelişimine odaklanan <strong className="font-semibold text-white">Certifi Learning Management System (LMS)</strong> platformunun geliştirme sürecinde aktif yazılım geliştiricisi olarak görev aldım.</>,
+        <><strong className="font-semibold text-white">Next.js, React, TypeScript, Tailwind CSS ve Supabase</strong> teknolojilerini kullanarak öğrenci, eğitmen ve yönetici panellerinin geliştirilmesine katkı sağladım.</>,
+        <>Eğitim programları, içerik yönetimi, sertifikalar, kullanıcı deneyimi ve modern arayüz bileşenleri gibi birçok modülün geliştirilmesinde aktif rol aldım.</>,
+        <>Ekip arkadaşları ve proje yöneticileri ile gerçekleştirilen haftalık sprint ve değerlendirme toplantılarına katılarak geliştirme süreçlerini planladım, geri bildirimler doğrultusunda sistemi sürekli iyileştirdim.</>,
+        <>Git tabanlı geliştirme süreçlerinde görev alarak versiyon kontrolü, kod düzeni ve ekip içi iş akışlarına uygun şekilde geliştirmeler gerçekleştirdim.</>,
       ],
     },
     {
@@ -71,48 +97,49 @@ const Resume = () => {
         "Yapay Zekâ Destekli Kodlama ön lisans programında eğitimime devam ediyorum.",
       ],
     },
+  ] : [
     {
-      badge: "EĞİTİM",
+      badge: "EDUCATION",
       dotColor: "bg-blue-500",
       badgeColor: "bg-blue-500/20 text-blue-400",
       bulletColor: "text-blue-400",
-      title: "Nişantaşı Üniversitesi",
-      subtitle: "Bilgisayar Mühendisliği (Lisans)",
-      period: "2021 - 2026",
-      location: "İstanbul, Türkiye",
+      title: "Nişantaşı University",
+      subtitle: "Computer Engineering (Bachelor's Degree)",
+      period: "Sep 2021 - Jul 2026",
+      duration: "5 years",
+      location: "Istanbul, Turkey",
       items: [
         <>
-          İstanbul Nişantaşı Üniversitesi bünyesinde,{" "}
+          Successfully completed the{" "}
           <a
             href="/sertifika/B2%20Level.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-500/50 hover:decoration-blue-400 transition-all font-medium"
           >
-            B2 Seviye İngilizce Hazırlık
+            B2 Level English Preparatory
           </a>{" "}
-          eğitimini başarıyla tamamladım.
+          education at Istanbul Nişantaşı University.
         </>,
-        "Bilgisayar Mühendisliği lisans programından mezun oldum.",
+        "Graduated from the Computer Engineering undergraduate program.",
       ],
     },
-  ] : [
     {
       badge: "EXPERIENCE",
       dotColor: "bg-purple-500",
       badgeColor: "bg-purple-500/20 text-purple-400",
       bulletColor: "text-purple-400",
-      title: "Max Potential Athlete Incubator Center",
-      subtitle: "Software Intern (LMS Project Lead)",
-      period: "May 2026 - Jun 2026",
-      duration: "2 months",
-      location: "Istanbul, Turkey",
+      title: "Lotus-AI Artificial Intelligence and IT Solutions Inc.",
+      subtitle: "Software Intern",
+      period: "Nov 2025 - Jan 2026",
+      duration: "3 months",
+      location: "Remote, Turkey",
       items: [
-        <>Worked as an active software developer in the development of the <strong className="font-semibold text-white">Certifi Learning Management System (LMS)</strong> platform focused on athlete development.</>,
-        <>Contributed to the development of student, instructor, and admin panels using <strong className="font-semibold text-white">Next.js, React, TypeScript, Tailwind CSS, and Supabase</strong>.</>,
-        <>Took an active role in developing modules such as training programs, content management, certificates, user experience, and modern UI components.</>,
-        <>Participated in weekly sprint and evaluation meetings with team members and project managers to plan development and continuously improve the system based on feedback.</>,
-        <>Worked in Git-based development processes, performing updates in accordance with version control, code structure, and team workflows.</>,
+        <>Participated in data processing and workflow development on KNIME, contributing to data preparation and analysis tasks.</>,
+        <>Developed data analysis, ETL processes, and basic machine learning applications using <strong className="font-semibold text-white">Python, SQLite, Plotly, and Pandas</strong>.</>,
+        <>Performed data visualization tasks with <strong className="font-semibold text-white">Matplotlib</strong>, contributing to the reporting of analysis results.</>,
+        <>Conducted literature reviews and academic research within the scope of AI-assisted phytotherapy (herbal treatment) research.</>,
+        <>Regularly documented the progress of my work with daily activity reports and weekly technical presentations, contributing to project management.</>,
       ],
     },
     {
@@ -136,17 +163,17 @@ const Resume = () => {
       dotColor: "bg-purple-500",
       badgeColor: "bg-purple-500/20 text-purple-400",
       bulletColor: "text-purple-400",
-      title: "Lotus-AI Artificial Intelligence and IT Solutions Inc.",
-      subtitle: "Software Intern",
-      period: "Nov 2025 - Jan 2026",
-      duration: "3 months",
-      location: "Remote, Turkey",
+      title: "Max Potential Athlete Incubator Center",
+      subtitle: "Software Intern (LMS Project Lead)",
+      period: "May 2026 - Jun 2026",
+      duration: "2 months",
+      location: "Istanbul, Turkey",
       items: [
-        <>Participated in data processing and workflow development on KNIME, contributing to data preparation and analysis tasks.</>,
-        <>Developed data analysis, ETL processes, and basic machine learning applications using <strong className="font-semibold text-white">Python, SQLite, Plotly, and Pandas</strong>.</>,
-        <>Performed data visualization tasks with <strong className="font-semibold text-white">Matplotlib</strong>, contributing to the reporting of analysis results.</>,
-        <>Conducted literature reviews and academic research within the scope of AI-assisted phytotherapy (herbal treatment) research.</>,
-        <>Regularly documented the progress of my work with daily activity reports and weekly technical presentations, contributing to project management.</>,
+        <>Worked as an active software developer in the development of the <strong className="font-semibold text-white">Certifi Learning Management System (LMS)</strong> platform focused on athlete development.</>,
+        <>Contributed to the development of student, instructor, and admin panels using <strong className="font-semibold text-white">Next.js, React, TypeScript, Tailwind CSS, and Supabase</strong>.</>,
+        <>Took an active role in developing modules such as training programs, content management, certificates, user experience, and modern UI components.</>,
+        <>Participated in weekly sprint and evaluation meetings with team members and project managers to plan development and continuously improve the system based on feedback.</>,
+        <>Worked in Git-based development processes, performing updates in accordance with version control, code structure, and team workflows.</>,
       ],
     },
     {
@@ -160,31 +187,6 @@ const Resume = () => {
       location: "Open Education, Turkey",
       items: [
         "Continuing my education in the AI-Assisted Coding associate degree program.",
-      ],
-    },
-    {
-      badge: "EDUCATION",
-      dotColor: "bg-blue-500",
-      badgeColor: "bg-blue-500/20 text-blue-400",
-      bulletColor: "text-blue-400",
-      title: "Nişantaşı University",
-      subtitle: "Computer Engineering (Bachelor's Degree)",
-      period: "2021 - 2026",
-      location: "Istanbul, Turkey",
-      items: [
-        <>
-          Successfully completed the{" "}
-          <a
-            href="/sertifika/B2%20Level.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-500/50 hover:decoration-blue-400 transition-all font-medium"
-          >
-            B2 Level English Preparatory
-          </a>{" "}
-          education at Istanbul Nişantaşı University.
-        </>,
-        "Graduated from the Computer Engineering undergraduate program.",
       ],
     },
   ];
@@ -246,13 +248,12 @@ const Resume = () => {
               href="/cv/Uygar_Gormez_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-7 py-3 rounded-full text-sm sm:text-base font-semibold hover:opacity-95 hover:shadow-xl hover:shadow-purple-600/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold text-sm sm:text-base text-white bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 shadow-lg shadow-purple-600/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer"
             >
               <span>{language === 'tr' ? "CV İndir" : "Download CV"}</span>
             </a>
           </div>
         </FadeIn>
-
       </div>
     </section>
   );

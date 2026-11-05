@@ -4,6 +4,27 @@ import FadeIn from "./FadeIn";
 import { useLanguage } from '../context/LanguageContext';
 import { events } from '../data/events';
 
+const formatDate = (date, lang) => {
+  if (!date) return '';
+  if (typeof date === 'object') return date[lang] || date.en || '';
+  if (lang === 'tr') {
+    return date
+      .replace('February', 'Şubat')
+      .replace('October', 'Ekim')
+      .replace('January', 'Ocak')
+      .replace('March', 'Mart')
+      .replace('April', 'Nisan')
+      .replace('May', 'Mayıs')
+      .replace('June', 'Haziran')
+      .replace('July', 'Temmuz')
+      .replace('August', 'Ağustos')
+      .replace('September', 'Eylül')
+      .replace('November', 'Kasım')
+      .replace('December', 'Aralık');
+  }
+  return date;
+};
+
 const Certificates = () => {
   const { language } = useLanguage();
 
@@ -41,13 +62,6 @@ const Certificates = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F1016] via-transparent to-transparent opacity-60" />
 
-                  {/* Date Badge */}
-                  <div className="absolute top-4 right-4 z-10">
-                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#08090D]/85 backdrop-blur-md text-purple-300 border border-purple-500/20 shadow-sm">
-                      {event.date}
-                    </span>
-                  </div>
-
                   {/* Organization Badge */}
                   <div className="absolute top-4 left-4 z-10">
                     <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#08090D]/85 backdrop-blur-md text-white border border-white/10 shadow-sm">
@@ -58,6 +72,10 @@ const Certificates = () => {
                 
                 {/* Event Content */}
                 <div className="p-6 sm:p-7 flex flex-col flex-grow">
+                  <div className="text-xs text-content-secondary mb-3">
+                    <span>{formatDate(event.date, language)}</span>
+                  </div>
+
                   <h3 className="text-xl sm:text-2xl font-bold font-heading text-white group-hover:text-purple-300 transition-colors mb-2.5">
                     {event.title[language]}
                   </h3>

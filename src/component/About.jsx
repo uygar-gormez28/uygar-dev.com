@@ -33,9 +33,19 @@ const About = () => {
       image: "/sertifika/claude-101.png"
     },
     {
+      name: "Claude Code in Action",
+      issuer: "Anthropic",
+      image: "/sertifika/claude-code-action.jpg"
+    },
+    {
       name: "Model Context Protocol: Advanced Topics",
       issuer: "Anthropic",
       image: "/sertifika/mcp-advanced.png"
+    },
+    {
+      name: "Introduction to Large Language Models",
+      issuer: "Google Cloud",
+      image: "/sertifika/google-intro-llm.jpg"
     },
     {
       name: "Introduction to Agent Skills",
@@ -43,9 +53,19 @@ const About = () => {
       image: "/sertifika/agent-skills.png"
     },
     {
+      name: "AI Fluency: Framework & Foundations",
+      issuer: "Anthropic",
+      image: "/sertifika/ai-fluency-framework.jpg"
+    },
+    {
       name: "AI Fluency for Educators",
       issuer: "Anthropic",
       image: "/sertifika/ai-fluency.png"
+    },
+    {
+      name: "AI Fluency for students",
+      issuer: "Anthropic",
+      image: "/sertifika/ai-fluency-students.jpg"
     }
   ];
 
@@ -74,31 +94,25 @@ const About = () => {
                 {language === 'tr' ? (
                   <>
                     <p>
-                      Bilgisayar Mühendisliği mezunuyum. Eğitim sürecimi sadece akademik teorilerle sınırlı tutmayıp, üç farklı staj deneyimiyle zenginleştirdim ve gerçek şirket projelerinde aktif geliştirici olarak rol aldım.
+                      Bilgisayar Mühendisliği mezunuyum. Üniversite sürecimde üç farklı staj yaparak yazılım geliştirme alanında deneyim kazandım ve gerçek projelerde yer aldım.
                     </p>
                     <p>
-                      Son olarak <span className="text-white font-medium">Max Potential</span> bünyesinde çalıştım. Eczacıbaşı Geleceğe Smaç Programı kapsamında hayata geçirilen <span className="text-white font-medium">Certifi LMS</span> projesinin hem frontend hem de backend süreçlerinde görev alarak Next.js, React, TypeScript ve Supabase ekosisteminde üretim yaptım.
+                      Son stajımı <strong className="text-white font-semibold">Max Potential</strong> bünyesinde tamamladım. Eczacıbaşı Geleceğe Smaç Programı kapsamında geliştirilen <strong className="text-white font-semibold">Certifi LMS</strong> projesinde <span className="text-purple-400 font-medium">Next.js, React, TypeScript ve Supabase</span> kullanarak hem frontend hem de backend geliştirmelerinde görev aldım.
                     </p>
                     <p>
-                      Kendimi sürekli geliştirmeyi ve yeni teknolojiler öğrenmeyi bir alışkanlık olarak görüyorum. Kariyerime, kullanıcı deneyimini sağlam mühendislik mimarileriyle buluşturduğum <span className="text-purple-300 font-medium">Full Stack Developer</span> pozisyonunda devam etmeyi hedefliyorum.
-                    </p>
-                    <p className="text-content-secondary/90 italic pt-1">
-                      Yazılım geliştirmenin dışında kitap okumayı ve okuduklarım üzerine incelemeler yazmayı seviyorum.
+                      Yeni teknolojiler öğrenmeyi ve fikirlerimi çalışan projelere dönüştürmeyi seviyorum. Hedefim, kendimi hem frontend hem de backend alanlarında geliştirerek <span className="text-purple-400 font-medium">Full Stack Developer</span> olarak kariyerime devam etmek.
                     </p>
                   </>
                 ) : (
                   <>
                     <p>
-                      I am a Computer Engineering graduate. Rather than limiting my education to academic theories, I enriched it with three distinct internship experiences, actively participating as a developer on production-grade systems.
+                      I am a Computer Engineering graduate. Throughout my university journey, I gained hands-on software development experience through three distinct internships and contributed to real-world projects.
                     </p>
                     <p>
-                      Most recently, I worked at <span className="text-white font-medium">Max Potential</span>, taking part in both frontend and backend development of the <span className="text-white font-medium">Certifi LMS</span> platform built for the Eczacıbaşı Geleceğe Smaç Program using Next.js, React, TypeScript, and Supabase.
+                      I completed my most recent internship at <strong className="text-white font-semibold">Max Potential</strong>. In the <strong className="text-white font-semibold">Certifi LMS</strong> project developed for the Eczacıbaşı Geleceğe Smaç Program, I contributed to both frontend and backend development using <span className="text-purple-400 font-medium">Next.js, React, TypeScript, and Supabase</span>.
                     </p>
                     <p>
-                      I view continuous self-improvement and learning emerging technologies as a core discipline. I aim to continue my career as a <span className="text-purple-300 font-medium">Full Stack Developer</span>, bridging delightful user interfaces with dependable software architectures.
-                    </p>
-                    <p className="text-content-secondary/90 italic pt-1">
-                      Outside of software development, I enjoy reading books and writing reviews on what I read.
+                      I enjoy learning new technologies and turning ideas into functional, living projects. My goal is to advance across both frontend and backend domains to pursue my career as a <span className="text-purple-400 font-medium">Full Stack Developer</span>.
                     </p>
                   </>
                 )}
