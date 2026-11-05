@@ -30,13 +30,13 @@ const BlogDetail = () => {
   return (
     <div className="min-h-screen bg-bg-primary text-content-primary pb-24 antialiased">
       {/* Hero Banner */}
-      <div className="relative h-[48vh] sm:h-[55vh] w-full overflow-hidden bg-bg-surface border-b border-white/[0.08]">
+      <div className={`relative h-[48vh] sm:h-[55vh] w-full overflow-hidden border-b border-white/[0.08] flex items-center justify-center ${post.bgClass || 'bg-bg-surface'}`}>
         <img 
           src={post.image} 
           alt={post.title[language]} 
-          className="w-full h-full object-cover" 
+          className={`w-full h-full ${post.imageClass?.includes('contain') ? `${post.imageClass} max-h-[85%]` : (post.imageClass || 'object-cover object-center')}`} 
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-bg-primary/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-bg-primary/60 to-transparent pointer-events-none" />
         
         {/* Back Link */}
         <div className="absolute top-6 left-4 sm:left-8 z-20">

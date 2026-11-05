@@ -2,6 +2,7 @@ import React from "react";
 import About from "./About";
 import Contact from "./Contact";
 import Hero from "./Hero";
+import UpcomingCompetition from "./UpcomingCompetition";
 import Projects from "./Projects";
 import Resume from "./Resume";
 import References from "./References";
@@ -20,6 +21,9 @@ const Home = () => {
       <section id="home">
         <Hero />
       </section>
+
+      {/* Upcoming Hackathon / Competition Card */}
+      <UpcomingCompetition />
       
       <section id="about">
         <About />

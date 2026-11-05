@@ -1,9 +1,61 @@
 export const posts = [
   {
+    id: 6,
+    title: {
+      tr: "İlk Yazılım Yarışmamız: SaaS Future Bridge Buildathon '26",
+      en: "Our First Hackathon: SaaS Future Bridge Buildathon '26"
+    },
+    excerpt: {
+      tr: "NovAI ekibimizle başvurduğumuz SaaS Future Bridge Buildathon '26 yarışmasında son 25 takım arasına seçilme sürecimiz ve yarışma hazırlıklarımız.",
+      en: "Our journey of being selected among the top 25 teams for SaaS Future Bridge Buildathon '26 with our NovAI team and our competition preparations."
+    },
+    date: {
+      tr: "5 Kasım 2026",
+      en: "November 5, 2026"
+    },
+    readTime: "3 min read",
+    author: "Uygar Görmez",
+    category: {
+      tr: "Yarışma",
+      en: "Hackathon"
+    },
+    image: "/img/buildathon-blog.png",
+    imageClass: "object-contain px-3 py-2 sm:px-4 sm:py-2.5",
+    bgClass: "bg-[#4341d1]",
+    content: {
+      tr: `Arkadaşlarımla birlikte iş arama sürecimiz devam ederken bir yandan da katılabileceğimiz yazılım etkinliklerini ve yarışmalarını araştırıyorduk. Hem yeni deneyimler kazanmak hem de kendimizi farklı alanlarda denemek istiyorduk.
+
+Araştırmalarımız sırasında SaaS Future Bridge Buildathon '26 yarışmasına denk geldik. Biraz inceledikten sonra "Neden şansımızı denemiyoruz?" diyerek üç kişilik ekibimizle başvurumuzu yaptık.
+
+Açıkçası sürecin bu kadar hızlı ilerlemesini beklemiyorduk. Başvurumuzun kabul edildiğini ilk ben fark ettim. Son 25 takım arasına seçildiğimizi öğrenmek hem şaşırtıcı hem de sevindiriciydi. Sonrasında organizasyon yetkilisiyle bir görüşme gerçekleştirdik ve yarışmanın nasıl ilerleyeceği hakkında bilgi aldık.
+
+2 Aralık 2026'da BTM İstanbul'da gerçekleşecek yarışmada, bize o gün verilen konu üzerine 8 saat içerisinde çalışan bir uygulama geliştirmeye çalışacağız.
+
+Daha önce böyle bir yarışma deneyimim olmadığı için açıkçası biraz heyecanlıyım. Kısıtlı sürede fikir üretmek, ekip olarak kararlar almak ve ortaya çalışan bir ürün çıkarmak bizim için farklı bir deneyim olacak.
+
+Şimdilik üç kişilik NovAI ekibimizle yarışmaya hazırlanıyoruz. Nasıl bir konuyla karşılaşacağımızı ve o sekiz saatin nasıl geçeceğini merak ediyorum.
+
+Umarım güzel bir iş çıkarır ve yarışmayı kazanırız. Bakalım bizi neler bekliyor!`,
+      en: `While my friends and I were continuing our job search journey, we were also actively researching software events, hackathons, and competitions we could participate in. We wanted to gain hands-on experience and challenge ourselves across different domains.
+
+During our search, we came across the SaaS Future Bridge Buildathon '26. After looking into the details, we thought "Why not give it a shot?" and submitted our application as a team of three.
+
+Honestly, we didn't expect the process to move this fast. I was actually the first one to notice that our application had been accepted. Finding out that we were selected among the top 25 teams was both a pleasant surprise and deeply exciting. Soon after, we had an onboarding call with the organizers and received all the details on how the competition will unfold.
+
+On December 2, 2026 at BTM Istanbul, we will have 8 hours to build a fully functional application around a prompt given to us on the spot.
+
+Since I haven't had a hackathon experience like this before, I'm genuinely excited. Generating ideas under tight time constraints, making swift decisions as a team, and delivering a working software product will be a tremendous learning experience for all of us.
+
+For now, we are busy preparing with our three-member NovAI team. I'm very curious about what challenge topic we'll face and how those eight intense hours will fly by.
+
+Hopefully we'll deliver great work and win the competition. Let's see what awaits us!`
+    }
+  },
+  {
     id: 5,
     title: {
-      tr: "Mezuniyet 5 Yıl ne çabuk bitti?",
-      en: "The 5-Year Path to Computer Engineering"
+      tr: "Nişantaşı Üniversitesi Mezuniyeti: 5 Yıl ne çabuk bitti?",
+      en: "Nişantaşı University: The 5-Year Path to Computer Engineering"
     },
     excerpt: {
       tr: "Hazırlık sınıfından mezuniyete, Nişantaşı Üniversitesi Bilgisayar Mühendisliği bölümünde geçen 5 yıllık yolculuğum ve biriktirdiğim anılar.",
@@ -20,6 +72,7 @@ export const posts = [
       en: "Career"
     },
     image: "/img/mezuniyet.png",
+    imageClass: "object-cover object-[center_35%]",
     content: {
       tr: `Üniversite tercih döneminde açıkçası ne Nişantaşı Üniversitesinde okuyacağımı ne de hazırlık sınıfına kalacağımı düşünüyordum.
 
@@ -186,7 +239,8 @@ A new chapter begins.`
       en: "Career"
     },
     image: "/img/max-potential.png",
-    imageClass: "object-contain bg-[#1b1b1b]",
+    imageClass: "object-contain p-4 sm:p-5",
+    bgClass: "bg-[#1b1b1b]",
     content: {
       tr: `Belediyedeki zorunlu stajım devam ederken okuldan beklemediğim bir telefon aldım.
 
